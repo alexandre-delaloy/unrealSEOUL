@@ -1,0 +1,18 @@
+.header {
+  font-family: $font-sans-serif;
+  text-align: center;
+  padding: 6rem 0;
+  background: #EAEAEA;
+  &-title {
+    font-size: 2.4rem;
+    @include for-size(tablet-portrait-up) {
+      font-size: 3rem;
+    }
+  }
+  &-subTitle {
+    font-size: 1.8rem;
+    @include for-size(tablet-portrait-up) {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,2 +1,3 @@
 # unrealSEOUL
-Fake tourism site using SCSS for training
+
+> Fake tourism website using SCSS for training myself 🇰🇷
