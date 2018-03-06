@@ -1,4 +1,4 @@
 import 'flexboxgrid';
 import './styles/styles.scss';
 
-document.addEventListener('click', () => alert('hello'));
+document.write('JS\'s connected');

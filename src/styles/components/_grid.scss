@@ -1,0 +1,66 @@
+.container {
+  width: 400px;
+  height: 400px;
+  margin: 100px 25px;
+  display: grid;
+  position: absolute;
+  left: 46%;
+  transform: translate(-50%, 0);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 7px;
+  grid-template-areas: "img1 img2"
+                       "img3 textImg";
+}
+.img1 {
+  grid-area: img1;
+  background: url('https://www.bluevolt.fr/wp-content/uploads/2017/05/Longboard-Bluevolt-Boards-Shark-4.jpg') no-repeat center;
+  background-size: cover;
+}
+.img2 {
+  grid-area: img2;
+  background: url('https://www.vagueetvent.com/blog/wp-content/uploads/2017/05/kQ8M9Z.jpg') no-repeat center;
+  background-size: cover;
+}
+.img3 {
+  grid-area: img3;
+  background: url('https://lh3.googleusercontent.com/vVFgVzGniu6kIb4ExGO0k96LCoiaLHjPWeLFFeMPgQ1Glhkvip8VyU6ISCkZVhoyhg=h900') no-repeat center;
+  background-size: cover;
+}
+.text {
+  grid-area: textImg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: helvetica;
+  &_title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  &_text {
+    margin-bottom: 10px;
+    width: 90%;
+    font-size: 12px;
+  }
+  &_link {
+    margin-bottom: 10px;
+    width: 90%;
+    font-size: 12px;
+    text-decoration: none;
+    color: #28b0ff;
+  }
+}
+
+
+@media (min-width: 600px) {
+  .container {
+    width: 575px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px auto auto 75px;
+    grid-template-areas: ". img2 img2"
+                         "img1 img2 img2"
+                         "img1 img3 textImg"
+                         ". img3 textImg"
+  }
+}
