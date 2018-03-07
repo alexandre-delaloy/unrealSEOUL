@@ -1,4 +1,4 @@
-# ![logo](./logo.jpg)
+# ![logo](src/assets/imgs/icons/logo.jpg)
 
 ## What is Unreal**Seoul** ?
 
