@@ -150,9 +150,7 @@ module.exports = reloadCSS;
 require('flexboxgrid');
 
 require('./styles/styles.scss');
-
-document.write('JS\'s connected');
-},{"flexboxgrid":5,"./styles/styles.scss":3}],19:[function(require,module,exports) {
+},{"flexboxgrid":5,"./styles/styles.scss":3}],20:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -275,5 +273,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[19,2])
+},{}]},{},[20,2])
 //# sourceMappingURL=/dist/0561c7ad3c16ebe3beaa3f6e1a670b33.map
