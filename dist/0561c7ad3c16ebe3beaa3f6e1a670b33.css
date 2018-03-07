@@ -1009,32 +1009,3 @@ table {
 @font-face {
   font-family: "NunitoSans-Bold";
   src: url("c8ef920c711a055e8d0b9caa140ba2b7.ttf"); }
-
-.header {
-  text-align: center;
-  padding: 6rem 0;
-  background: linear-gradient(-0.125turn, #82D3FF, #8B83FF); }
-  .header-title {
-    font-size: 2.4rem;
-    font-family: "NunitoSans-Bold";
-    color: #8B83FF; }
-    @media (min-width: 600px) {
-      .header-title {
-        font-size: 3rem; } }
-  .header-subTitle {
-    font-size: 1.8rem;
-    font-family: "NunitoSans-Light"; }
-    @media (min-width: 600px) {
-      .header-subTitle {
-        font-size: 3rem; } }
-
-.text {
-  font-family: "NunitoSans-Regular"; }
-
-.text2 {
-  font-family: "NunitoSans-SemiBold"; }
-
-.div {
-  width: 100px;
-  height: 50px;
-  border: 2px linear-gradient(-0.125turn, #8B83FF, #82D3FF) solid; }

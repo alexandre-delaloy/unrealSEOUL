@@ -7,14 +7,45 @@
 </head>
 <body>
   <header class="header">
-    <h1 class="header-title">Titre principal</h1>
-    <h3 class="header-subTitle">Titre secondaire</h3>
+    <div class="header_titleBox">
+      <svg version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="130px" height="100px" enable-background="new 0 0 1400 1400" xml:space="preserve">
+      	<defs>
+      		<linearGradient id="linear" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="#fff"/>
+            <stop offset="100%" stop-color="$blue"/>
+          </linearGradient>
+      	</defs>
+      	<path class="Logo_path" d="M 0,97 20,97 20,35 35,35 35,2 70,2 70,12, 95,12 95,97, 130,97" ></path>
+      </svg>
+      <div class="header_title">
+        <h1 class="header_title_mainTitle">Unreal<span class="header_title_mainTitleSpan">Seoul</span></h1>
+        <h2 class="header title_subTitle">Your Seoul’s interesting place reference.</h2>
+      </div>
+    </div>
+    <div class="header_menu">
+      <div class="header_menu_burger">
+        <div class=" header_menu_burger_firstLine"></div>
+        <div class="header_menu_burger_lastLine"></div>
+      </div>
+      <section class="header_menu_overlay">
+        <ul class="header_menu_overlay_items">
+          <li class="header_menu_overlay_item">10-clicks method</li>
+          <li class="header_menu_overlay_item">Random places
+
+
+          </li>
+          <li class="header_menu_overlay_item">Seoul districts</li>
+          <li class="header_menu_overlay_item">Top 3</li>
+        </ul>
+      </section>
+    </div>
+    <p class="header_typewriter"></p>
+    <div class="header_button">
+      <input type="text" class="header_button_input">
+      <img src="" alt="" class="header_button_img">
+    </div>
+    <a class="header_music" href="../src/assets/music.mp3"></a>
   </header>
-  <section>
-    <p class="text">OS COUR</p>
-    <p class="text2">ALED</p>
-    <div class="div"></div>
-  </section>
   <script src="./index.js"></script>
 </body>
 </html>
