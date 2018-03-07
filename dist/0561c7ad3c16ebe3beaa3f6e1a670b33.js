@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({5:[function(require,module,exports) {
+})({11:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],4:[function(require,module,exports) {
+},{}],6:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,19 +132,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":5}],6:[function(require,module,exports) {
+},{"./bundle-url":11}],5:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":4}],3:[function(require,module,exports) {
+},{"_css_loader":6}],3:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../assets/fonts/NunitoSans-Light.ttf":[["24518a5d1eef97e29c3995408ce00b4d.ttf",14],14],"./../assets/fonts/NunitoSans-Regular.ttf":[["1a8304b4e854ec023a9e0104b8a24715.ttf",15],15],"./../assets/fonts/NunitoSans-SemiBold.ttf":[["5eef6c6322212bbbd643ac667ad18f9a.ttf",17],17],"./../assets/fonts/NunitoSans-Bold.ttf":[["c8ef920c711a055e8d0b9caa140ba2b7.ttf",16],16],"_css_loader":4}],2:[function(require,module,exports) {
+},{"./../assets/fonts/NunitoSans-Light.ttf":[["24518a5d1eef97e29c3995408ce00b4d.ttf",12],12],"./../assets/fonts/NunitoSans-Regular.ttf":[["1a8304b4e854ec023a9e0104b8a24715.ttf",13],13],"./../assets/fonts/NunitoSans-SemiBold.ttf":[["5eef6c6322212bbbd643ac667ad18f9a.ttf",14],14],"./../assets/fonts/NunitoSans-Bold.ttf":[["c8ef920c711a055e8d0b9caa140ba2b7.ttf",15],15],"_css_loader":6}],2:[function(require,module,exports) {
 'use strict';
 
 require('flexboxgrid');
@@ -152,7 +152,7 @@ require('flexboxgrid');
 require('./styles/styles.scss');
 
 document.write('JS\'s connected');
-},{"flexboxgrid":6,"./styles/styles.scss":3}],29:[function(require,module,exports) {
+},{"flexboxgrid":5,"./styles/styles.scss":3}],18:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -174,7 +174,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '63838' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51233' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -275,5 +275,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[29,2])
+},{}]},{},[18,2])
 //# sourceMappingURL=/dist/0561c7ad3c16ebe3beaa3f6e1a670b33.map

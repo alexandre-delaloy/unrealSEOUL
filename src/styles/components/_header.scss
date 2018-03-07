@@ -1,7 +1,7 @@
 .header {
   text-align: center;
   padding: 6rem 0;
-  background: $lg-PtB;
+  background: $blueToPurple;
 
   &-title {
     font-size: 2.4rem;
@@ -24,4 +24,9 @@
 }
 .text2 {
   font-family: $NS-sBld;
+}
+.div {
+  width: 100px;
+  height: 50px;
+  border: 2px $purpleToBlue solid;
 }

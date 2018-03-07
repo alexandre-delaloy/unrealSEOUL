@@ -1013,7 +1013,7 @@ table {
 .header {
   text-align: center;
   padding: 6rem 0;
-  background: linear-gradient(-0.125turn, #8B83FF, #82D3FF); }
+  background: linear-gradient(-0.125turn, #82D3FF, #8B83FF); }
   .header-title {
     font-size: 2.4rem;
     font-family: "NunitoSans-Bold";
@@ -1033,3 +1033,8 @@ table {
 
 .text2 {
   font-family: "NunitoSans-SemiBold"; }
+
+.div {
+  width: 100px;
+  height: 50px;
+  border: 2px linear-gradient(-0.125turn, #8B83FF, #82D3FF) solid; }
