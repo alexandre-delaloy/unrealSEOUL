@@ -1,17 +1,27 @@
 .header {
   text-align: center;
   padding: 6rem 0;
-  background: $ultraColor;
+  background: $lg-PtB;
+
   &-title {
     font-size: 2.4rem;
+    font-family: $NS-Bld;
+    color: $purple;
     @include for-size(tablet-portrait-up) {
       font-size: 3rem;
     }
   }
   &-subTitle {
     font-size: 1.8rem;
+    font-family: $NS-Lgh;
     @include for-size(tablet-portrait-up) {
       font-size: 3rem;
     }
   }
+}
+.text {
+  font-family: $NS-Reg;
+}
+.text2 {
+  font-family: $NS-sBld;
 }

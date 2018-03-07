@@ -1,9 +1,18 @@
+// fonts
+$NS-Reg: "NunitoSans-Regular";
+$NS-Lgh: "NunitoSans-Light";
+$NS-Bld: "NunitoSans-Bold";
+$NS-sBld: "NunitoSans-SemiBold";
 
+// colors
+$xBlue: #83F0FF;
+$blue: #82D3FF;
+$mBlue: #85B6FF;
+$purple: #8B83FF;
 
-// Colors
-$mainColor: #4D7FD5;
-$secondaryColor: #4D61D6;
-$ultraColor: #927EEC;
+// linear-gradient
+$blueToPurple: linear-gradient(-0.125turn, $blue, $purple);
+$purpleToBlue: linear-gradient(-0.125turn, $purple, $blue);
 
 // Breakpoints
 $bp-tablet: 600px;
