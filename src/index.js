@@ -28,3 +28,15 @@ mute.addEventListener('click', function (){
 });
 
 // LANGUAGE
+
+var en = document.querySelector('.header_language_en');
+var kr = document.querySelector('.header_language_kr');
+
+en.addEventListener('click', function() {
+  en.classList.toggle('language-active');
+  kr.classList.toggle('language-active');
+});
+kr.addEventListener('click', function() {
+  en.classList.toggle('language-active');
+  kr.classList.toggle('language-active');
+});

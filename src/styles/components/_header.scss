@@ -1,3 +1,7 @@
+.language-active {
+  font-family: $NS-Bld;
+  background: $purpleToBlue-opMed;
+}
 .header {
   background: url('../assets/imgs/bg/home_bg.jpg') no-repeat center;
   background-size: cover;
@@ -51,6 +55,7 @@
       z-index: 3;
       top: 30px;
       right: 30px;
+      cursor: pointer;
       &_firstLine,
       &_lastLine {
         background: #fff;
@@ -84,18 +89,21 @@
     }
     &_overlay {
       background: $xlBlue;
-      width: 100%;
+      width: 160%;
       height: 100vh;
       position: absolute;
       z-index: 2;
-      top: 0;
-      left: 0;
-
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s;
+      top: -125vh;
+      left: -30%;
+      transform: rotate(22.5deg);
+      transition: all 0.75s;
       &_items {
-
+        background: red;
+        width: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       &_item {
         &_link {
@@ -125,7 +133,7 @@
     	position: absolute;
       transition: all 0.3s;
     }
-    &_music_after {
+    &_after {
       background: #fff;
       animation-delay: 1s;
     }
@@ -139,18 +147,14 @@
     position: fixed;
     right: 30px;
     bottom: 30px;
-    opacity: 0.333;
     &_en,
     &_kr {
-      margin: 0 5px;
+      cursor: pointer;
+      padding:  2px;
     }
   }
 }
-.language-active {
-  font-size: $Med;
-  font-family: $NS-Bld;
-    opacity: 1 !important;
-}
+
 @keyframes dash {
   to {
     stroke-dashoffset: -400;

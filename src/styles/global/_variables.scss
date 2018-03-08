@@ -15,14 +15,18 @@ $Sml: 1.8rem;
 $xlBlue: #EAF2FF;
 $lBlue: #83F0FF;
 $blue: #82D3FF;
+$blue-opMed: rgba(130, 211, 255, 0.5);
 $dBlue: #85B6FF;
 $xdBlue: #022965;
 
 $purple: #8B83FF;
+$purple-opMed: rgba(139, 131, 255, 0.5);
 
 // linear-gradient
 $blueToPurple: linear-gradient(-0.125turn, $blue, $purple);
+$blueToPurple-opMed:  linear-gradient(-0.125turn, $blue-opMed, $purple-opMed);
 $purpleToBlue: linear-gradient(-0.125turn, $purple, $blue);
+$purpleToBlue-opMed: linear-gradient(-0.125turn, $purple-opMed, $blue-opMed);
 
 // Breakpoints
 $bp-tablet: 600px;
