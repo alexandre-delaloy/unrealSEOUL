@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.js --no-cache"
+    "build": "parcel build src/index.html --no-cache --public-url ./"
   },
   "author": "alexdll",
   "license": "ISC",

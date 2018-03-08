@@ -5,9 +5,13 @@ document.write('JS\'s connected !');
 // MENU
 var burger = document.querySelector('.header_menu_burger');
 var menu = document.querySelector('.header_menu_overlay');
+var firstLine = document.querySelector('.header_menu_burger_firstLine');
+var lastLine = document.querySelector('.header_menu_burger_lastLine')
 
 burger.addEventListener('click', function() {
   menu.classList.toggle('is-active');
+  // firstLine.classList.toggle('header_menu_burger_firstLine-anim');
+  // lastLine.classList.toggle('header_menu_burger_lastLine-anim');
 });
 
 // MUTE
@@ -32,11 +36,13 @@ mute.addEventListener('click', function (){
 var en = document.querySelector('.header_language_en');
 var kr = document.querySelector('.header_language_kr');
 
+var change = document.querySelector('.header_language_change');
+
 en.addEventListener('click', function() {
-  en.classList.toggle('language-active');
-  kr.classList.toggle('language-active');
+  change.classList.toggle('toLeft');
+	change.classList.toggle('toRight');
 });
 kr.addEventListener('click', function() {
-  en.classList.toggle('language-active');
-  kr.classList.toggle('language-active');
+  change.classList.toggle('toLeft');
+	change.classList.toggle('toRight');
 });

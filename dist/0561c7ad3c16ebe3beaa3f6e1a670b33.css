@@ -998,6 +998,10 @@ html {
   font-size: 62.5%; }
 
 @font-face {
+  font-family: "NunitoSans-ExtraLight";
+  src: url("699d8bf293d2db222865ff12ecf98e2f.ttf"); }
+
+@font-face {
   font-family: "NunitoSans-Light";
   src: url("24518a5d1eef97e29c3995408ce00b4d.ttf"); }
 
@@ -1048,10 +1052,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #82D3FF; }
 
-.language-active {
-  font-family: "NunitoSans-Bold";
-  background: linear-gradient(-0.125turn, rgba(139, 131, 255, 0.5), rgba(130, 211, 255, 0.5)); }
-
 .header {
   background: url("6455c7d65346d7d4516bcf2bbd5e4c79.jpg") no-repeat center;
   background-size: cover;
@@ -1063,7 +1063,7 @@ body {
     .header_titleBox_logo {
       position: fixed;
       top: 25px;
-      left: 30px; }
+      left: 25px; }
       .header_titleBox_logo_path {
         fill: none;
         stroke-width: 12px;
@@ -1078,9 +1078,9 @@ body {
     justify-content: space-between;
     position: absolute;
     top: 28px;
-    left: 115px; }
+    left: 110px; }
     .header_title_mainTitle {
-      font-family: "NunitoSans-Light";
+      font-family: "NunitoSans-ExtraLight";
       font-size: 3rem;
       letter-spacing: 0.5; }
     .header_title_mainTitleSpan {
@@ -1088,20 +1088,20 @@ body {
       font-family: "NunitoSans-Bold";
       letter-spacing: 0.75; }
     .header_title_subTitle {
-      font-family: "NunitoSans-Light";
+      font-family: "NunitoSans-ExtraLight";
       font-size: 1.8rem; }
   .header_menu_burger {
-    width: 50px;
-    height: 27px;
+    width: 30px;
+    height: 19px;
     position: fixed;
     z-index: 3;
-    top: 30px;
-    right: 30px;
+    top: 25px;
+    right: 25px;
     cursor: pointer; }
     .header_menu_burger_firstLine, .header_menu_burger_lastLine {
       background: #fff;
-      width: 50px;
-      height: 3px;
+      width: 30px;
+      height: 2px;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -1109,35 +1109,72 @@ body {
     .header_menu_burger_firstLine:before, .header_menu_burger_lastLine:after {
       content: '';
       background: #fff;
-      width: 35px;
-      height: 3px;
+      width: 20px;
+      height: 2px;
       position: absolute;
       right: 0;
       transition: all 0.25s ease-out; }
     .header_menu_burger_firstLine:before {
-      top: -12.65px; }
+      top: -8px; }
     .header_menu_burger_lastLine:after {
-      bottom: -12.65px; }
+      bottom: -8px; }
+    .header_menu_burger_firstLine-anim {
+      transform: rotate(-45deg); }
+    .header_menu_burger_lastLine-anim {
+      transform: rotate(45deg); }
   .header_menu_burger:hover > .header_menu_burger_firstLine:before,
   .header_menu_burger:hover > .header_menu_burger_lastLine:after {
-    right: 15px; }
+    right: 10px; }
   .header_menu_overlay {
-    background: #EAF2FF;
+    background: rgba(0, 0, 0, 0.8);
     width: 160%;
     height: 100vh;
     position: absolute;
     z-index: 2;
-    top: -125vh;
+    top: -150vh;
     left: -30%;
     transform: rotate(22.5deg);
     transition: all 0.75s; }
     .header_menu_overlay_items {
-      background: red;
-      width: 100px;
       position: absolute;
       top: 50%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       left: 50%;
       transform: translate(-50%, -50%); }
+    .header_menu_overlay_item_link {
+      color: #000;
+      background: #fff;
+      display: inline-block;
+      width: 300px;
+      padding: 15px 20px;
+      font-family: "NunitoSans-SemiBold";
+      font-size: 3rem;
+      text-decoration: none;
+      text-align: left;
+      transition: all 2s; }
+    .header_menu_overlay_item_link:hover {
+      color: red;
+      text-align: right; }
+  .header_button_input {
+    background: linear-gradient(rgba(0, 224, 255, 0.33), rgba(255, 255, 255, 0.25));
+    color: #fff;
+    border: 2.25px #fff solid;
+    width: 350px;
+    height: 65px;
+    text-align: center;
+    font-family: "NunitoSans-ExtraLight";
+    font-size: 3rem;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 5s ease 2s;
+    cursor: pointer; }
+  .header_button_input:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 224, 255, 0.33)); }
   .header_music {
     background: #fff;
     width: 20px;
@@ -1156,7 +1193,7 @@ body {
       height: 20px;
       border-radius: 100%;
       position: absolute;
-      transition: all 0.3s; }
+      transition: all 0.25s ease-out; }
     .header_music_after {
       background: #fff;
       animation-delay: 1s; }
@@ -1167,11 +1204,60 @@ body {
     font-family: "NunitoSans-Regular";
     font-size: 2rem;
     position: fixed;
-    right: 30px;
-    bottom: 30px; }
+    right: 25px;
+    bottom: 25px; }
     .header_language_en, .header_language_kr {
       cursor: pointer;
-      padding: 2px; }
+      padding: 2px;
+      position: relative;
+      z-index: 2; }
+    .header_language_change {
+      background: linear-gradient(-0.125turn, rgba(139, 131, 255, 0.75), rgba(130, 211, 255, 0.75));
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      z-index: 1; }
+
+.toRight {
+  animation: toRight .5s ease-out;
+  width: 50%;
+  right: 0;
+  left: 50%; }
+
+.toLeft {
+  animation: toLeft .5s ease-out;
+  width: 50%;
+  left: 0;
+  right: 50%; }
+
+@keyframes toRight {
+  0% {
+    width: 50%;
+    left: 0;
+    right: 50%; }
+  50% {
+    width: 100%;
+    left: 0;
+    right: 0; }
+  100% {
+    width: 50%;
+    right: 0;
+    left: 50%; } }
+
+@keyframes toLeft {
+  0% {
+    width: 50%;
+    right: 0;
+    left: 50%; }
+  50% {
+    width: 100%;
+    right: 0;
+    left: 0; }
+  100% {
+    width: 50%;
+    left: 0;
+    right: 50%; } }
 
 @keyframes dash {
   to {

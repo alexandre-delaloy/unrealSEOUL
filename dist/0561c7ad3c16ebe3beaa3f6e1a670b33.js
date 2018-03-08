@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({11:[function(require,module,exports) {
+})({15:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],5:[function(require,module,exports) {
+},{}],6:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,19 +132,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":11}],12:[function(require,module,exports) {
+},{"./bundle-url":15}],14:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":5}],4:[function(require,module,exports) {
+},{"_css_loader":6}],5:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../assets/fonts/NunitoSans-Light.ttf":[["24518a5d1eef97e29c3995408ce00b4d.ttf",6],6],"./../assets/fonts/NunitoSans-Regular.ttf":[["1a8304b4e854ec023a9e0104b8a24715.ttf",7],7],"./../assets/fonts/NunitoSans-SemiBold.ttf":[["5eef6c6322212bbbd643ac667ad18f9a.ttf",8],8],"./../assets/fonts/NunitoSans-Bold.ttf":[["c8ef920c711a055e8d0b9caa140ba2b7.ttf",9],9],"./../assets/imgs/bg/home_bg.jpg":[["6455c7d65346d7d4516bcf2bbd5e4c79.jpg",10],10],"_css_loader":5}],2:[function(require,module,exports) {
+},{"./../assets/fonts/NunitoSans-ExtraLight.ttf":[["699d8bf293d2db222865ff12ecf98e2f.ttf",8],8],"./../assets/fonts/NunitoSans-Light.ttf":[["24518a5d1eef97e29c3995408ce00b4d.ttf",9],9],"./../assets/fonts/NunitoSans-Regular.ttf":[["1a8304b4e854ec023a9e0104b8a24715.ttf",10],10],"./../assets/fonts/NunitoSans-SemiBold.ttf":[["5eef6c6322212bbbd643ac667ad18f9a.ttf",11],11],"./../assets/fonts/NunitoSans-Bold.ttf":[["c8ef920c711a055e8d0b9caa140ba2b7.ttf",12],12],"./../assets/imgs/bg/home_bg.jpg":[["6455c7d65346d7d4516bcf2bbd5e4c79.jpg",13],13],"_css_loader":6}],2:[function(require,module,exports) {
 'use strict';
 
 require('flexboxgrid');
@@ -156,9 +156,13 @@ document.write('JS\'s connected !');
 // MENU
 var burger = document.querySelector('.header_menu_burger');
 var menu = document.querySelector('.header_menu_overlay');
+var firstLine = document.querySelector('.header_menu_burger_firstLine');
+var lastLine = document.querySelector('.header_menu_burger_lastLine');
 
 burger.addEventListener('click', function () {
   menu.classList.toggle('is-active');
+  // firstLine.classList.toggle('header_menu_burger_firstLine-anim');
+  // lastLine.classList.toggle('header_menu_burger_lastLine-anim');
 });
 
 // MUTE
@@ -181,15 +185,17 @@ mute.addEventListener('click', function () {
 var en = document.querySelector('.header_language_en');
 var kr = document.querySelector('.header_language_kr');
 
+var change = document.querySelector('.header_language_change');
+
 en.addEventListener('click', function () {
-  en.classList.toggle('language-active');
-  kr.classList.toggle('language-active');
+  change.classList.toggle('toLeft');
+  change.classList.toggle('toRight');
 });
 kr.addEventListener('click', function () {
-  en.classList.toggle('language-active');
-  kr.classList.toggle('language-active');
+  change.classList.toggle('toLeft');
+  change.classList.toggle('toRight');
 });
-},{"flexboxgrid":12,"./styles/styles.scss":4}],13:[function(require,module,exports) {
+},{"flexboxgrid":14,"./styles/styles.scss":5}],17:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -211,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52848' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61498' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -312,5 +318,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[13,2])
+},{}]},{},[17,2])
 //# sourceMappingURL=/dist/0561c7ad3c16ebe3beaa3f6e1a670b33.map

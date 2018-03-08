@@ -1,7 +1,4 @@
-.language-active {
-  font-family: $NS-Bld;
-  background: $purpleToBlue-opMed;
-}
+
 .header {
   background: url('../assets/imgs/bg/home_bg.jpg') no-repeat center;
   background-size: cover;
@@ -13,7 +10,7 @@
     &_logo {
     position: fixed;
     top: 25px;
-    left: 30px;
+    left: 25px;
       &_path {
         fill: none;
       	stroke-width: 12px;
@@ -31,9 +28,9 @@
     justify-content: space-between;
     position: absolute;
     top: 28px;
-    left: 115px;
+    left: 110px;
     &_mainTitle {
-      font-family: $NS-Lgh;
+      font-family: $NS-xLgh;
       font-size: $Big;
       letter-spacing: 0.5;
     }
@@ -43,24 +40,24 @@
       letter-spacing: 0.75;
     }
     &_subTitle {
-      font-family: $NS-Lgh;
+      font-family: $NS-xLgh;
       font-size: $Sml;
     }
   }
   &_menu {
     &_burger {
-      width: 50px;
-      height: 27px;
+      width: 30px;
+      height: 19px;
       position: fixed;
       z-index: 3;
-      top: 30px;
-      right: 30px;
+      top: 25px;
+      right: 25px;
       cursor: pointer;
       &_firstLine,
       &_lastLine {
         background: #fff;
-        width: 50px;
-        height: 3px;
+        width: 30px;
+        height: 2px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -70,47 +67,89 @@
       &_lastLine:after {
         content: '';
         background: #fff;
-        width: 35px;
-        height: 3px;
+        width: 20px;
+        height: 2px;
         position: absolute;
         right: 0;
         transition: all 0.25s ease-out;
       }
       &_firstLine:before {
-        top: -12.65px;
+        top: -8px;
       }
       &_lastLine:after {
-        bottom: -12.65px;
+        bottom: -8px;
+      }
+      &_firstLine-anim {
+        transform: rotate(-45deg);
+      }
+      &_lastLine-anim {
+        transform: rotate(45deg);
       }
     }
     &_burger:hover > .header_menu_burger_firstLine:before,
     &_burger:hover > .header_menu_burger_lastLine:after {
-      right: 15px;
+      right: 10px;
     }
     &_overlay {
-      background: $xlBlue;
+      background: rgba(0,0,0,0.80);
       width: 160%;
       height: 100vh;
       position: absolute;
       z-index: 2;
-      top: -125vh;
+      top: -150vh;
       left: -30%;
       transform: rotate(22.5deg);
       transition: all 0.75s;
       &_items {
-        background: red;
-        width: 100px;
         position: absolute;
         top: 50%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         left: 50%;
         transform: translate(-50%, -50%);
       }
       &_item {
         &_link {
+          color: #000;
+          background: #fff;
+          display: inline-block;
+          width: 300px;
+          padding: 15px 20px;
+          font-family: $NS-sBld;
+          font-size: $Big;
+          text-decoration: none;
+          text-align: left;
 
+          transition: all 2s ;
+        }
+        &_link:hover {
+          color: red;
+          text-align: right;
         }
       }
     }
+  }
+  &_button_input {
+    background: $blueToWhite-opSml;
+    color: #fff;
+    border: 2.25px #fff solid;
+    width: 350px;
+    height: 65px;
+    text-align: center;
+    font-family: $NS-xLgh;
+    font-size: $Big;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 5s ease 2s;
+    cursor: pointer;
+
+  }
+  &_button_input:hover {
+    background: $whiteToBlue-opSml;
   }
   &_music {
     background: #fff;
@@ -131,7 +170,7 @@
     	height: 20px;
     	border-radius: 100%;
     	position: absolute;
-      transition: all 0.3s;
+        transition: all 0.25s ease-out;
     }
     &_after {
       background: #fff;
@@ -145,14 +184,70 @@
     font-family: $NS-Reg;
     font-size: $Reg;
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 25px;
+    bottom: 25px;
     &_en,
     &_kr {
       cursor: pointer;
       padding:  2px;
+      position: relative;
+      z-index: 2;
+    }
+    &_change {
+      background: $purpleToBlue-opMed;
+    	width: 50%;
+    	height: 100%;
+    	position: absolute;
+    	left: 0;
+      z-index: 1;
     }
   }
+}
+.toRight {
+
+	animation: toRight .5s ease-out;width: 50%;
+		right: 0;
+		left: 50%;
+}
+.toLeft {
+
+	animation: toLeft .5s ease-out;width: 50%;
+		left: 0;
+		right: 50%;
+}
+@keyframes toRight {
+	0% {
+		width: 50%;
+		left: 0;
+		right: 50%;
+	}
+	50% {
+		width: 100%;
+		left: 0;
+		right: 0;
+	}
+	100% {
+		width: 50%;
+		right: 0;
+		left: 50%;
+	}
+}
+@keyframes toLeft {
+	0% {
+		width: 50%;
+		right: 0;
+		left: 50%;
+	}
+	50% {
+		width: 100%;
+		right: 0;
+		left: 0;
+	}
+	100% {
+		width: 50%;
+		left: 0;
+		right: 50%;
+	}
 }
 
 @keyframes dash {
