@@ -162,7 +162,6 @@ burger.addEventListener('click', function () {
 });
 
 // MUTE
-
 var audio = document.getElementById('audio');
 var mute = document.querySelector('.header_music');
 var muteBefore = document.querySelector('.header_music_before');
@@ -176,7 +175,10 @@ mute.addEventListener('click', function () {
   muteAfter.classList.toggle('pulse');
   muteBefore.classList.toggle('pulse');
 });
-},{"flexboxgrid":10,"./styles/styles.scss":3}],64:[function(require,module,exports) {
+
+// LANGUAGE
+var en = document.querySelector('');
+},{"flexboxgrid":10,"./styles/styles.scss":3}],65:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -299,5 +301,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[64,2])
+},{}]},{},[65,2])
 //# sourceMappingURL=/dist/0561c7ad3c16ebe3beaa3f6e1a670b33.map

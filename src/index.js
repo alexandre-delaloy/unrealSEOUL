@@ -12,7 +12,6 @@ burger.addEventListener('click', function() {
 });
 
 // MUTE
-
 var audio = document.getElementById('audio');
 var mute = document.querySelector('.header_music');
 var muteBefore = document.querySelector('.header_music_before');
@@ -28,3 +27,6 @@ mute.addEventListener('click', function (){
   muteBefore.classList.toggle('pulse');
 
 });
+
+// LANGUAGE
+var en = document.querySelector('')
