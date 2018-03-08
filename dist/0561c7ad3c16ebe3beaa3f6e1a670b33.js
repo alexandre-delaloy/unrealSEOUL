@@ -144,7 +144,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../assets/fonts/NunitoSans-Light.ttf":[["24518a5d1eef97e29c3995408ce00b4d.ttf",6],6],"./../assets/fonts/NunitoSans-Regular.ttf":[["1a8304b4e854ec023a9e0104b8a24715.ttf",8],8],"./../assets/fonts/NunitoSans-SemiBold.ttf":[["5eef6c6322212bbbd643ac667ad18f9a.ttf",7],7],"./../assets/fonts/NunitoSans-Bold.ttf":[["c8ef920c711a055e8d0b9caa140ba2b7.ttf",9],9],"./../assets/imgs/bg/home_bg.jpg":[["6455c7d65346d7d4516bcf2bbd5e4c79.jpg",10],10],"_css_loader":5}],2:[function(require,module,exports) {
+},{"./../assets/fonts/NunitoSans-Light.ttf":[["24518a5d1eef97e29c3995408ce00b4d.ttf",6],6],"./../assets/fonts/NunitoSans-Regular.ttf":[["1a8304b4e854ec023a9e0104b8a24715.ttf",7],7],"./../assets/fonts/NunitoSans-SemiBold.ttf":[["5eef6c6322212bbbd643ac667ad18f9a.ttf",8],8],"./../assets/fonts/NunitoSans-Bold.ttf":[["c8ef920c711a055e8d0b9caa140ba2b7.ttf",9],9],"./../assets/imgs/bg/home_bg.jpg":[["6455c7d65346d7d4516bcf2bbd5e4c79.jpg",10],10],"_css_loader":5}],2:[function(require,module,exports) {
 'use strict';
 
 require('flexboxgrid');
@@ -211,7 +211,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '64604' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49650' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
