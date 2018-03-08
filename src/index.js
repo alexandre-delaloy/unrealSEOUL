@@ -1,6 +1,5 @@
 import 'flexboxgrid';
 import './styles/styles.scss';
-
 document.write('JS\'s connected !');
 
 // MENU
@@ -29,4 +28,3 @@ mute.addEventListener('click', function (){
 });
 
 // LANGUAGE
-var en = document.querySelector('')
