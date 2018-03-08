@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({11:[function(require,module,exports) {
+})({9:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],6:[function(require,module,exports) {
+},{}],4:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,25 +132,51 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":11}],5:[function(require,module,exports) {
+},{"./bundle-url":9}],10:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":6}],3:[function(require,module,exports) {
+},{"_css_loader":4}],3:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../assets/fonts/NunitoSans-Light.ttf":[["24518a5d1eef97e29c3995408ce00b4d.ttf",12],12],"./../assets/fonts/NunitoSans-Regular.ttf":[["1a8304b4e854ec023a9e0104b8a24715.ttf",13],13],"./../assets/fonts/NunitoSans-SemiBold.ttf":[["5eef6c6322212bbbd643ac667ad18f9a.ttf",14],14],"./../assets/fonts/NunitoSans-Bold.ttf":[["c8ef920c711a055e8d0b9caa140ba2b7.ttf",15],15],"_css_loader":6}],2:[function(require,module,exports) {
+},{"./../assets/fonts/NunitoSans-Light.ttf":[["24518a5d1eef97e29c3995408ce00b4d.ttf",6],6],"./../assets/fonts/NunitoSans-Regular.ttf":[["1a8304b4e854ec023a9e0104b8a24715.ttf",5],5],"./../assets/fonts/NunitoSans-SemiBold.ttf":[["5eef6c6322212bbbd643ac667ad18f9a.ttf",8],8],"./../assets/fonts/NunitoSans-Bold.ttf":[["c8ef920c711a055e8d0b9caa140ba2b7.ttf",7],7],"./../assets/imgs/bg/home_bg.jpg":[["6455c7d65346d7d4516bcf2bbd5e4c79.jpg",14],14],"_css_loader":4}],2:[function(require,module,exports) {
 'use strict';
 
 require('flexboxgrid');
 
 require('./styles/styles.scss');
-},{"flexboxgrid":5,"./styles/styles.scss":3}],20:[function(require,module,exports) {
+
+document.write('JS\'s connected !');
+
+// MENU
+var burger = document.querySelector('.header_menu_burger');
+var menu = document.querySelector('.header_menu_overlay');
+
+burger.addEventListener('click', function () {
+  menu.classList.toggle('is-active');
+});
+
+// MUTE
+
+var audio = document.getElementById('audio');
+var mute = document.querySelector('.header_music');
+var muteBefore = document.querySelector('.header_music_before');
+var muteAfter = document.querySelector('.header_music_after');
+mute.addEventListener('click', function () {
+  if (audio.muted === false) {
+    audio.muted = true;
+  } else {
+    audio.muted = false;
+  }
+  muteAfter.classList.toggle('pulse');
+  muteBefore.classList.toggle('pulse');
+});
+},{"flexboxgrid":10,"./styles/styles.scss":3}],64:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -172,7 +198,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51233' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50632' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -273,5 +299,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[20,2])
+},{}]},{},[64,2])
 //# sourceMappingURL=/dist/0561c7ad3c16ebe3beaa3f6e1a670b33.map
