@@ -7,12 +7,18 @@ var burger = document.querySelector('.header_menu_burger');
 var menu = document.querySelector('.header_menu_overlay');
 var firstLine = document.querySelector('.header_menu_burger_firstLine');
 var lastLine = document.querySelector('.header_menu_burger_lastLine')
+var items = document.querySelectorAll('.header_menu_overlay_items');
 
 burger.addEventListener('click', function() {
   menu.classList.toggle('is-active');
   // firstLine.classList.toggle('header_menu_burger_firstLine-anim');
   // lastLine.classList.toggle('header_menu_burger_lastLine-anim');
 });
+for (var i = 0; i < items.length; i++) {
+  items[i].addEventListener('click', function() {
+    menu.classList.toggle('is-active');
+  });
+}
 
 // MUTE
 var audio = document.getElementById('audio');
