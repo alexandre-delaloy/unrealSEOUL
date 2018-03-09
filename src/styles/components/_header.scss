@@ -199,30 +199,43 @@
       font-family: $NS-Reg;
     }
   }
-  &_button_input {
-    background: $blueToWhite-opSml;
-    color: #fff;
-    border: 2.25px #fff solid;
-    width: 350px;
-    height: 65px;
-    text-align: center;
-    font-family: $NS-xLgh;
-    font-size: $Big;
+  &_button {
+
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, 0);
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  &_button_input:hover {
-    background: $whiteToBlue-opSml;
-  }
-  &_button_input-anim {
-    width: 500px;
-    text-align: left;
-    cursor: text;
-    padding-left: 10px;
+    &_input {
+      background: $blueToWhite-opSml;
+      color: #fff;
+      border: 2.25px #fff solid;
+      width: 350px;
+      height: 65px;
+      text-align: center;
+      font-family: $NS-xLgh;
+      font-size: $Big;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    &_input:hover {
+      background: $whiteToBlue-opSml;
+    }
+    &_input-anim {
+      width: 500px;
+      text-align: left;
+      cursor: text;
+      padding-left: 10px;
+    }
+    &_search {
+      width: 30px;
+      height: auto;
+      position: absolute;
+      right: 14px;
+      top: 18px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
   }
   &_music {
     background: #fff;

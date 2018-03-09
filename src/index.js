@@ -19,13 +19,13 @@ var lastLine = document.querySelector('.header_menu_burger_lastLine')
 var items = document.querySelectorAll('.header_menu_overlay_items');
 
 burger.addEventListener('click', function() {
-  menu.classList.toggle('is-active');
+  menu.classList.toggle('menu-active');
   // firstLine.classList.toggle('header_menu_burger_firstLine-anim');
   // lastLine.classList.toggle('header_menu_burger_lastLine-anim');
 });
 for (var i = 0; i < items.length; i++) {
   items[i].addEventListener('click', function() {
-    menu.classList.toggle('is-active');
+    menu.classList.toggle('menu-active');
   });
 }
 
@@ -62,10 +62,12 @@ kr.addEventListener('click', function() {
 // INPUT
 var inputBox = document.querySelector('.header_button');
 var input = document.querySelector('.header_button_input');
+var search = document.querySelector('.header_button_search');
 
 inputBox.addEventListener('click', function() {
   input.removeAttribute('disabled');
   input.removeAttribute('value');
   input.setAttribute('placeholder', ' : enter what you want to visit');
-  input.classList.add('header_button_input-anim')
+  input.classList.add('header_button_input-anim');
+	search.classList.add('is-active');
 })
