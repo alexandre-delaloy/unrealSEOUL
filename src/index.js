@@ -1,6 +1,15 @@
 import 'flexboxgrid';
 import './styles/styles.scss';
-document.write('JS\'s connected !');
+
+// PARALLAX
+window.addEventListener("scroll", function() {
+	var slider = document.querySelector(".header");
+	var yPos = window.pageYOffset / slider.dataset.speed;
+	yPos = +yPos;
+
+	var coords = '0% '+ yPos + 'px';
+	slider.style.backgroundPosition = coords;
+});
 
 // MENU
 var burger = document.querySelector('.header_menu_burger');
@@ -34,13 +43,11 @@ mute.addEventListener('click', function (){
   }
   muteAfter.classList.toggle('pulse');
   muteBefore.classList.toggle('pulse');
-
 });
 
 // LANGUAGE
 var en = document.querySelector('.header_language_en');
 var kr = document.querySelector('.header_language_kr');
-
 var change = document.querySelector('.header_language_change');
 
 en.addEventListener('click', function() {
@@ -55,7 +62,6 @@ kr.addEventListener('click', function() {
 // INPUT
 var inputBox = document.querySelector('.header_button');
 var input = document.querySelector('.header_button_input');
-
 
 inputBox.addEventListener('click', function() {
   input.removeAttribute('disabled');

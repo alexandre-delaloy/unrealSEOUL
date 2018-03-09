@@ -1,0 +1,88 @@
+// SVG
+@keyframes dash {
+  to {
+    stroke-dashoffset: -400;
+  }
+}
+
+// MENU LINK
+@keyframes link-anim-l {
+	0%,100% {
+		transform: rotate(0deg);
+		width: 0%;
+		left: 0%;
+	}
+	50% {
+		transform: rotate(22.5deg);
+		width: 58%;
+	left: -10%;
+  opacity: .5;
+	}
+}
+@keyframes link-anim-r {
+	0%,100% {
+		transform: rotate(0deg);
+		width: 0%;
+		right: 0%;
+	}
+	50% {
+		transform: rotate(22.5deg);
+		width: 58%;
+	right: -10%;
+  opacity: 0.5;
+	}
+}
+
+// MUSIC
+.pulse {
+  animation: pulse 2s infinite linear;
+}
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+		transform: scale(1.5, 1.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(2, 2)
+	}
+}
+
+// LANGUAGE
+@keyframes toRight {
+	0% {
+		width: 50%;
+		left: 0;
+		right: 50%;
+	}
+	50% {
+		width: 100%;
+		left: 0;
+		right: 0;
+	}
+	100% {
+		width: 50%;
+		right: 0;
+		left: 50%;
+	}
+}
+@keyframes toLeft {
+	0% {
+		width: 50%;
+		right: 0;
+		left: 50%;
+	}
+	50% {
+		width: 100%;
+		right: 0;
+		left: 0;
+	}
+	100% {
+		width: 50%;
+		left: 0;
+		right: 50%;
+	}
+}
