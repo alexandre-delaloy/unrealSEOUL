@@ -38,3 +38,20 @@ transform: rotate(0deg) !important;
 ::-webkit-scrollbar-thumb:hover {
    	background: $blue;
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $white-opHrd;
+  font-family: $NS-Lgh;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $white-opHrd;
+  font-family: $NS-Lgh;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $white-opHrd;
+  font-family: $NS-Lgh;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $white-opHrd;
+  font-family: $NS-Lgh;
+}

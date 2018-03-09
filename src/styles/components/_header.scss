@@ -94,7 +94,7 @@
       background: rgba(0,0,0,0.80);
       width: 160%;
       height: 100vh;
-      position: absolute;
+      position: fixed;
       z-index: 2;
       top: -150vh;
       left: -30%;
@@ -103,7 +103,7 @@
       &_items {
         position: absolute;
         top: 50%;
-        height: 300px;
+        height: 350px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -111,23 +111,72 @@
         transform: translate(-50%, -50%);
       }
       &_item {
-        &_link {
-          color: #000;
-          background: #fff;
-          display: inline-block;
-          width: 300px;
-          padding: 15px 20px;
-          font-family: $NS-sBld;
-          font-size: $Big;
-          text-decoration: none;
-          text-align: left;
+        transition: all 0.75s;
 
-          transition: all 2s ;
+        &_link {
+          color: #fff;
+      	  width: 300px;
+      	  height: 75px;
+      	  margin: 10px;
+          font-size: 3rem;
+          font-family: $NS-Lgh;
+      	  position: relative;
+          overflow: hidden;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 10px;
+          transition: all 0.5s;
+          &::before {
+            content:'';
+        		background: red;
+        		width: 0%;
+        		height: 200%;
+        		transform: rotate(0deg);
+        		position: absolute;
+        		top: -50%;
+        		left: 0%;
+          }
+        	&:hover:before {
+        		animation: hover 0.5s ease-in-out;
+        	}
+        	&::after {
+            content:'';
+        		background: red;
+        		width: 0%;
+        		height: 200%;
+        		transform: rotate(0deg);
+        		position: absolute;
+        		top: -50%;
+        		right: 0%;
+        	}
+          &-1::after,
+          &-1::before {
+            background: $purple;
+          }
+          &-2::after,
+          &-2::before {
+            background: $dBlue;
+          }
+          &-3::after,
+          &-3::before {
+            background: $blue;
+          }
+          &-4::after,
+          &-4::before {
+            background: $lBlue;
+          }
+        	&:hover:after {
+        		animation: hover2 0.5s ease-in-out;
+        	}
         }
         &_link:hover {
-          color: red;
-          text-align: right;
+          letter-spacing: 2;
         }
+      }
+      &_item:hover {
+        justify-content: flex-end;
       }
     }
   }
@@ -144,12 +193,17 @@
     top: 75%;
     left: 50%;
     transform: translate(-50%, 0);
-    transition: all 5s ease 2s;
     cursor: pointer;
-
+    transition: all 0.3s;
   }
   &_button_input:hover {
     background: $whiteToBlue-opSml;
+  }
+  &_button_input-anim {
+    width: 500px;
+    text-align: left;
+    cursor: text;
+    padding-left: 10px;
   }
   &_music {
     background: #fff;
@@ -205,15 +259,17 @@
 }
 .toRight {
 
-	animation: toRight .5s ease-out;width: 50%;
-		right: 0;
-		left: 50%;
+	animation: toRight .5s ease-out;
+  width: 50%;
+	right: 0;
+	left: 50%;
 }
 .toLeft {
 
-	animation: toLeft .5s ease-out;width: 50%;
-		left: 0;
-		right: 50%;
+	animation: toLeft .5s ease-out;
+  width: 50%;
+	left: 0;
+	right: 50%;
 }
 @keyframes toRight {
 	0% {
@@ -255,3 +311,31 @@
     stroke-dashoffset: -400;
   }
 }
+@keyframes hover {
+	0%,100% {
+		transform: rotate(0deg);
+		width: 0%;
+		left: 0%;
+	}
+	50% {
+		transform: rotate(22.5deg);
+		width: 58%;
+	left: -10%;
+  opacity: .5;
+	}
+}
+@keyframes hover2 {
+	0%,100% {
+		transform: rotate(0deg);
+		width: 0%;
+		right: 0%;
+	}
+	50% {
+		transform: rotate(22.5deg);
+		width: 58%;
+	right: -10%;
+  opacity: 0.5;
+	}
+}
+
+* { color:#fff; text-decoration: none;}

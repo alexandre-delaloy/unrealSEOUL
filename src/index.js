@@ -32,7 +32,6 @@ mute.addEventListener('click', function (){
 });
 
 // LANGUAGE
-
 var en = document.querySelector('.header_language_en');
 var kr = document.querySelector('.header_language_kr');
 
@@ -46,3 +45,15 @@ kr.addEventListener('click', function() {
   change.classList.toggle('toLeft');
 	change.classList.toggle('toRight');
 });
+
+// INPUT
+var inputBox = document.querySelector('.header_button');
+var input = document.querySelector('.header_button_input');
+
+
+inputBox.addEventListener('click', function() {
+  input.removeAttribute('disabled');
+  input.removeAttribute('value');
+  input.setAttribute('placeholder', ' : enter what you want to visit');
+  input.classList.add('header_button_input-anim')
+})
