@@ -178,6 +178,27 @@
       }
     }
   }
+  &_typewriter {
+    width: 600px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &_items {
+      animation: slider 20s infinite;
+    }
+    &_item {
+      color: #fff;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $xBig;
+      font-family: $NS-Reg;
+    }
+  }
   &_button_input {
     background: $blueToWhite-opSml;
     color: #fff;
@@ -266,4 +287,27 @@
   width: 50%;
 	left: 0;
 	right: 50%;
+}
+@keyframes slider {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-100px);
+  }
+  40% {
+    transform: translateY(-200px);
+  }
+  60% {
+    transform: translateY(-300px);
+  }
+  80% {
+    transform: translateY(-400px);
+  }
+  99% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
