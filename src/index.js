@@ -20,8 +20,8 @@ var items = document.querySelectorAll('.header_menu_overlay_items');
 
 burger.addEventListener('click', function() {
   menu.classList.toggle('menu-active');
-  // firstLine.classList.toggle('header_menu_burger_firstLine-anim');
-  // lastLine.classList.toggle('header_menu_burger_lastLine-anim');
+  firstLine.classList.toggle('header_menu_burger_firstLine-anim');
+  lastLine.classList.toggle('header_menu_burger_lastLine-anim');
 });
 for (var i = 0; i < items.length; i++) {
   items[i].addEventListener('click', function() {
