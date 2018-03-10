@@ -200,7 +200,6 @@
     }
   }
   &_button {
-
     position: absolute;
     top: 75%;
     left: 50%;
@@ -227,14 +226,28 @@
       padding-left: 10px;
     }
     &_search {
+      padding: 17px;
       width: 30px;
       height: auto;
       position: absolute;
-      right: 14px;
-      top: 18px;
+      right: 0px;
+      top: 0px;
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s;
+      cursor: pointer;
+      fill: #ffffff;
+      &_path {
+        data-original: #000;
+        data-old_color: #fff ;
+        fill: #fff;
+      }
+    }
+    &_search:hover {
+      background: $white-opSml;
+    }
+    &_search:hover > .header_button_search_path {
+      fill: red;
     }
   }
   &_music {
