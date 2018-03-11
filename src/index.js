@@ -47,6 +47,7 @@ var audio = document.getElementById('audio');
 var mute = document.querySelector('.header_music');
 var muteBefore = document.querySelector('.header_music_before');
 var muteAfter = document.querySelector('.header_music_after');
+audio.volume = 0.05;
 mute.addEventListener('click', function (){
   if (audio.muted === false) {
          audio.muted = true;
@@ -73,9 +74,10 @@ kr.addEventListener('click', function() {
 });
 
 
+var linear = document.querySelector('#colorToChange');
+
 
 // SCOLLPOS
-
 window.addEventListener('scroll', function() {
 	if ( window.scrollY > 30) {
 		mute.classList.add('backgroundChange');
@@ -94,3 +96,19 @@ window.addEventListener('scroll', function() {
 		change.classList.remove('gradientBackgroundChange')
 	}
 });
+window.addEventListener('scroll', function() {
+	if ( window.scrollY > 650) {
+		linear.setAttribute('stop-color', '#8B83FF');
+		firstLine.classList.add('backgroundChange');
+		lastLine.classList.add('backgroundChange');
+	}
+	else {
+		linear.setAttribute('stop-color', '#fff');
+		firstLine.classList.remove('backgroundChange');
+		lastLine.classList.remove('backgroundChange');
+	}
+	// console.log(window.scrollY)
+});
+console.log('start');
+console.log(firstLine.getAttribute('before'))
+console.log('end');

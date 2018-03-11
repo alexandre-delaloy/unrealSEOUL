@@ -6,13 +6,15 @@ $NS-Bld: "NunitoSans-Bold";
 $NS-sBld: "NunitoSans-SemiBold";
 
 // font-size
-$xBig: 7.2rem;
+$xxBig: 7.2rem;
+$xBig: 4rem;
 $Big: 3rem;
 $Med: 2.4rem;
 $Reg: 2rem;
 $Sml: 1.8rem;
 
 // colors
+$medWhite: #F9F9F9;
 $xlBlue: #EAF2FF;
 $lBlue: #83F0FF;
 $blue: #82D3FF;
@@ -29,9 +31,13 @@ $white-opHrd: rgba(255,255,255,0.75);
 
 // linear-gradient
 $blueToPurple: linear-gradient(-0.125turn, $blue, $purple);
-$blueToPurple-opMed:  linear-gradient(-0.125turn, $blue-opMed, $purple-opMed);
-$purpleToBlue: linear-gradient(-0.125turn, $purple, $blue);
+$purpleToBlue: linear-gradient(-0.125turn, $purple, $blue) !important;
+$lBlueToWhite: linear-gradient(-0.125turn, #fff,  $lBlue);
+$dBlueToWhite: linear-gradient(-0.125turn, #fff, $dBlue);
+$purpleToWhite: linear-gradient(-0.125turn, #fff,  $purple);
+
 $purpleToBlue-opMed: linear-gradient(-0.125turn, $purple-opMed, $blue-opMed);
+$blueToPurple-opMed:  linear-gradient(-0.125turn, $blue-opMed, $purple-opMed);
 $blueToWhite-opSml: linear-gradient($blue-opSml, $white-opSml);
 $whiteToBlue-opSml: linear-gradient($white-opSml, $blue-opSml);
 $whiteToBlue-opHrdTurned: linear-gradient(-0.125turn, $white-opHrd, $blue-opMed);

@@ -11,6 +11,7 @@
     position: fixed;
     top: 25px;
     left: 25px;
+    z-index: 4;
       &_path {
         fill: none;
       	stroke-width: 12px;
@@ -29,6 +30,7 @@
     position: absolute;
     top: 28px;
     left: 110px;
+    z-index: 4;
     &_mainTitle {
       font-family: $NS-xLgh;
       font-size: $Big;
@@ -49,7 +51,7 @@
       width: 30px;
       height: 19px;
       position: fixed;
-      z-index: 3;
+      z-index: 6;
       top: 25px;
       right: 25px;
       cursor: pointer;
@@ -102,11 +104,11 @@
       width: 160%;
       height: 100vh;
       position: fixed;
-      z-index: 2;
+      z-index: 5;
       top: -150vh;
       left: -30%;
       transform: rotate(22.5deg);
-      transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-out;
       &_items {
         position: absolute;
         top: 50%;
@@ -144,24 +146,24 @@
             content:'';
         		background: red;
         		width: 0%;
-        		height: 200%;
-        		transform: rotate(0deg);
+        		height: 200px;
         		position: absolute;
-        		top: -50%;
+        		top: -50px;
         		left: 0%;
+        		transform: rotate(0deg);
           }
         	&:hover:before {
-        		animation: link-anim-l 0.5s ease-in-out;
+        		animation: link-anim-l 0.75s ease-in-out;
         	}
         	&::after {
             content:'';
         		background: red;
         		width: 0%;
-        		height: 200%;
-        		transform: rotate(0deg);
+        		height: 200px;
         		position: absolute;
-        		top: -50%;
+        		top: -50px;
         		right: 0%;
+        		transform: rotate(0deg);
         	}
           &-1::after,
           &-1::before {
@@ -180,7 +182,7 @@
             background: $lBlue;
           }
         	&:hover:after {
-        		animation: link-anim-r 0.5s ease-in-out;
+        		animation: link-anim-r 0.75s ease-in-out;
         	}
         }
       }
@@ -197,6 +199,7 @@
     position: absolute;
     top: 45%;
     left: 50%;
+    z-index: 4;
     transform: translate(-50%, -50%);
     &_items {
       animation: slider 20s infinite;
@@ -207,7 +210,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: $xBig;
+      font-size: $xxBig;
       font-family: $NS-Reg;
     }
   }
@@ -216,6 +219,7 @@
     top: 75%;
     left: 50%;
     transform: translate(-50%, 0);
+    z-index: 4;
     &_input {
       background: $blueToWhite-opSml;
       color: #fff;
@@ -272,6 +276,7 @@
 	  position: fixed;
 	  bottom: 30px;
 	  left: 30px;
+    z-index: 4;
     cursor: pointer;
     &_before,
     &_after {
@@ -300,6 +305,7 @@
     position: fixed;
     right: 25px;
     bottom: 25px;
+    z-index: 4;
     &_en,
     &_kr {
       cursor: pointer;
