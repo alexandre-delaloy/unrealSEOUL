@@ -12,21 +12,21 @@ $Med: 2.4rem;
 $Reg: 2rem;
 $Sml: 1.8rem;
 
-
 // colors
 $xlBlue: #EAF2FF;
 $lBlue: #83F0FF;
 $blue: #82D3FF;
-$blue-opMed: rgba(130, 211, 255, 0.75);
-$blue-opSml: rgba(0, 224, 255, 0.33);
 $dBlue: #85B6FF;
 $xdBlue: #022965;
-
 $purple: #8B83FF;
-$purple-opMed: rgba(139, 131, 255, 0.75);
 
+// rgba()
+$blue-opMed: rgba(130, 211, 255, 0.75);
+$blue-opSml: rgba(0, 224, 255, 0.33);
+$purple-opMed: rgba(139, 131, 255, 0.75);
 $white-opSml: rgba(255,255,255,0.25);
 $white-opHrd: rgba(255,255,255,0.75);
+
 // linear-gradient
 $blueToPurple: linear-gradient(-0.125turn, $blue, $purple);
 $blueToPurple-opMed:  linear-gradient(-0.125turn, $blue-opMed, $purple-opMed);
@@ -34,6 +34,7 @@ $purpleToBlue: linear-gradient(-0.125turn, $purple, $blue);
 $purpleToBlue-opMed: linear-gradient(-0.125turn, $purple-opMed, $blue-opMed);
 $blueToWhite-opSml: linear-gradient($blue-opSml, $white-opSml);
 $whiteToBlue-opSml: linear-gradient($white-opSml, $blue-opSml);
+$whiteToBlue-opHrdTurned: linear-gradient(-0.125turn, $white-opHrd, $blue-opMed);
 
 // Breakpoints
 $bp-tablet: 600px;

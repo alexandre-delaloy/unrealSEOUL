@@ -185,6 +185,10 @@
         }
       }
     }
+    &-active {
+      top: 0 !important;
+      transform: rotate(0deg) !important;
+    }
   }
   &_typewriter {
     width: 600px;
@@ -277,7 +281,10 @@
     	height: 20px;
     	border-radius: 100%;
     	position: absolute;
-        transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out;
+      &_pulse {
+        animation: pulse 2s infinite linear;
+      }
     }
     &_after {
       background: #fff;
@@ -299,6 +306,7 @@
       padding:  2px;
       position: relative;
       z-index: 2;
+      transition: all .25s ease;
     }
     &_change {
       background: $purpleToBlue-opMed;
@@ -307,41 +315,18 @@
     	position: absolute;
     	left: 0;
       z-index: 1;
+      &_toRight {
+      	animation: toRight .5s ease-out;
+        width: 50%;
+      	right: 0;
+      	left: 50%;
+      }
+      &_toLeft {
+      	animation: toLeft .5s ease-out;
+        width: 50%;
+      	left: 0;
+      	right: 50%;
+      }
     }
-  }
-}
-.toRight {
-	animation: toRight .5s ease-out;
-  width: 50%;
-	right: 0;
-	left: 50%;
-}
-.toLeft {
-	animation: toLeft .5s ease-out;
-  width: 50%;
-	left: 0;
-	right: 50%;
-}
-@keyframes slider {
-  0%,100% {
-    transform: translateY(0px);
-  }
-  20% {
-    transform: translateY(-100px);
-  }
-  40% {
-    transform: translateY(-200px);
-  }
-  60% {
-    transform: translateY(-300px);
-  }
-  80% {
-    transform: translateY(-400px);
-  }
-  99% {
-    transform: translateY(-500px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }
