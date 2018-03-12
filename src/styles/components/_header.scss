@@ -192,28 +192,37 @@
       transform: rotate(0deg) !important;
     }
   }
-  &_typewriter {
-    width: 600px;
+  .header_typewriter {
+	width: 600px;
     height: 100px;
     overflow: hidden;
     position: absolute;
     top: 45%;
     left: 50%;
-    z-index: 4;
     transform: translate(-50%, -50%);
-    &_items {
-      animation: slider 20s infinite;
-    }
-    &_item {
-      color: #fff;
-      height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: $xxBig;
-      font-family: $NS-Reg;
-    }
-  }
+}
+
+.header_typewriter_items {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.transition {
+	transition: all 750ms ease;
+}
+.transitionImg {
+	position: absolute;
+	display: block;
+}
+.header_typewriter_item {
+	color: #fff;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: $xxBig;
+	font-family: $NS-Reg;
+}
   &_button {
     position: absolute;
     top: 75%;

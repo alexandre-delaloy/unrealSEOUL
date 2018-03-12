@@ -78,37 +78,69 @@ var linear = document.querySelector('#colorToChange');
 
 
 // SCOLLPOS
-window.addEventListener('scroll', function() {
-	if ( window.scrollY > 30) {
-		mute.classList.add('backgroundChange');
-		muteBefore.classList.add('backgroundChange');
-		muteAfter.classList.add('backgroundChange');
-		en.classList.add('colorChange');
-		kr.classList.add('colorChange');
-		change.classList.add('gradientBackgroundChange')
-	}
-	else {
-		mute.classList.remove('backgroundChange');
-		muteBefore.classList.remove('backgroundChange');
-		muteAfter.classList.remove('backgroundChange');
-		en.classList.remove('colorChange');
-		kr.classList.remove('colorChange');
-		change.classList.remove('gradientBackgroundChange')
-	}
-});
-window.addEventListener('scroll', function() {
-	if ( window.scrollY > 650) {
-		linear.setAttribute('stop-color', '#8B83FF');
-		firstLine.classList.add('backgroundChange');
-		lastLine.classList.add('backgroundChange');
-	}
-	else {
-		linear.setAttribute('stop-color', '#fff');
-		firstLine.classList.remove('backgroundChange');
-		lastLine.classList.remove('backgroundChange');
-	}
-	// console.log(window.scrollY)
-});
+// window.addEventListener('scroll', function() {
+// 	if ( window.scrollY > 30) {
+// 		mute.classList.add('backgroundChange');
+// 		muteBefore.classList.add('backgroundChange');
+// 		muteAfter.classList.add('backgroundChange');
+// 		en.classList.add('colorChange');
+// 		kr.classList.add('colorChange');
+// 		change.classList.add('gradientBackgroundChange')
+// 	}
+// 	else {
+// 		mute.classList.remove('backgroundChange');
+// 		muteBefore.classList.remove('backgroundChange');
+// 		muteAfter.classList.remove('backgroundChange');
+// 		en.classList.remove('colorChange');
+// 		kr.classList.remove('colorChange');
+// 		change.classList.remove('gradientBackgroundChange')
+// 	}
+// });
+// window.addEventListener('scroll', function() {
+// 	if ( window.scrollY > document.querySelector('header').offsetHeight - 50) {
+// 		linear.setAttribute('stop-color', '#8B83FF');
+// 		firstLine.classList.add('backgroundChange');
+// 		lastLine.classList.add('backgroundChange');
+// 	}
+// 	else {
+// 		linear.setAttribute('stop-color', '#fff');
+// 		firstLine.classList.remove('backgroundChange');
+// 		lastLine.classList.remove('backgroundChange');
+// 	}
+// 	// console.log(window.scrollY)
+// });
 console.log('start');
 console.log(firstLine.getAttribute('before'))
 console.log('end');
+
+var carrousel = document.querySelector('.header_typewriter')
+var carrouselWrap = document.querySelector('.header_typewriter_items')
+var images = document.querySelectorAll('.header_typewriter_item')
+var carrouselWidth = 100;
+var imgs = [images[0], images[1], images[2], images[3], images[4], images[5]]
+var btnRight = document.querySelector('.right')
+var counter = 0;
+
+var prevImg = function() {
+	carrouselWrap.classList.add('transition')
+	counter++
+	if (counter > imgs.length - 1) {
+		images = document.querySelectorAll('.header_typewriter_item')
+		var node = images[images.length-1];
+		console.log(node)
+		carrouselWrap.insertBefore(node, carrouselWrap.childNodes[0]);
+		counter = 0
+		carrouselWrap.classList.remove('transition')
+		carrouselWrap.style.transform = 'translateY(-' + (counter) * carrouselWidth + "px)";
+		setTimeout(function() {
+			prevImg()
+		}, 1)
+	} else {
+		carrouselWrap.style.transform = 'translateY(-' + (counter) * carrouselWidth + "px)";
+	}
+}
+btnRight.addEventListener('click', function() {
+	prevImg()
+})
+
+var intervalID = window.setInterval(prevImg, 2500);
