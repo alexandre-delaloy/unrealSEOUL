@@ -1,7 +1,7 @@
 .method {
   background: $medWhite;
   width: 100%;
-
+  padding-bottom: 35px;
   &_title {
     background: $blueToPurple;
     -webkit-background-clip: text;
@@ -21,51 +21,17 @@
       border: 5px #000 solid;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
       transition: all .25s ease-out;
-      &:nth-of-type(1) &_text {
-          color: $lBlue;
-      }
-      &:nth-of-type(2) &_text {
-          color: $dBlue;
-      }
-      &:nth-of-type(3) &_text {
-          color: $purple;
-      }
-      &_text {
-        background: rgba(0,0,0,0);
-        padding: 15px;
-        font-family: $NS-Reg;
-        font-size: $Med;
-        position: relative;
-        z-index: 2;
-        transition: all 1s ease;
-      }
-      &:nth-child(1) {
-        background: url('../assets/imgs/bg/method/method1.jpg') no-repeat center;
-        background-size: cover;
-        border-image: $lBlueToWhite 30;
-
-      }
-      &:nth-child(2) {
-        background: url('../assets/imgs/bg/method/method2.jpg') no-repeat center;
-        background-size: cover;
-        border-image: $dBlueToWhite 30;
-
-      }
-      &:nth-child(3) {
-        background: url('../assets/imgs/bg/method/method3.jpg') no-repeat center;
-        background-size: cover;
-        border-image: $purpleToWhite 30;
-
+      &:hover {
+        transform: scale(1.01);
       }
       &::before {
         content: '';
-        width: 150%;
+        width: 550px;
         height: 150%;
         background: $medWhite;
-        -webkit-box-shadow: 10px 10px 58px -13px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 58px -13px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 58px -13px rgba(0,0,0,0.75);
+        @include boxshadow(10px, 10px, 58px, -13px, rgba(0,0,0,0.75))
         position: absolute;
         top: -75%;
         right: 9%;
@@ -84,13 +50,6 @@
 
         transition: all 0.5s ease;
       }
-      &:hover {
-        transform: scale(1.025);
-      }
-      &:hover > .method_box_article_text{
-        color: $medWhite;
-        background: rgba(0,0,0,0.25);
-      }
       &:hover:before {
         top: -150%;
         right: 61%;
@@ -99,7 +58,84 @@
       &:hover:after {
         background: rgba(0,0,0,0);
       }
-
+      &:nth-of-type(1) &_text {
+          color: $purple;
+      }
+      &:nth-of-type(2) &_text {
+          color: $dBlue;
+      }
+      &:nth-of-type(3) &_text {
+          color: $blue;
+      }
+      &:nth-child(1) {
+        background: url('../assets/imgs/bg/method/method1.jpg') no-repeat center;
+        background-size: cover;
+        border-image: $purpleToWhite 30;
+      }
+      &:nth-child(2) {
+        background: url('../assets/imgs/bg/method/method2.jpg') no-repeat center;
+        background-size: cover;
+        border-image: $dBlueToWhite 30;
+      }
+      &:nth-child(3) {
+        background: url('../assets/imgs/bg/method/method3.jpg') no-repeat center;
+        background-size: cover;
+        border-image: $BlueToWhite 30;
+      }
+      &_text {
+        background: rgba(0,0,0,0);
+        padding: 15px;
+        font-family: $NS-sBld;
+        font-size: $Med;
+        position: relative;
+        transition: all 1s ease;
+      }
+      &:hover > .method_box_article_text{
+        color: $medWhite;
+        background: rgba(0,0,0,0.33);
+      }
     }
   }
+  &_button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  	width: 530px;
+  	height: 105px;
+    &_svg {
+      &_path1,&_path2 {
+        fill: transparent;
+      	stroke: $dBlue;
+      	stroke-width: 4px;
+      	stroke-dasharray: 75;
+      	stroke-dashoffset: 75;
+      	animation: dash2 1s infinite linear;
+      	transition: all 0.5s ease;
+      }
+    }
+    &_clickable {
+      background: $purpleToBlue-opMed;
+    	color: #fff;
+    	font-size: 24px;
+    	font-family: "Nunito Sans";
+    	border: 4px #fff solid;
+    	width: 500px;
+    	height: 75px;
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: all 1s ;
+    }
+    &_clickable:hover {
+      background: $purpleToBlue;
+    }
+  }
+}
+
+@keyframes dash2 {
+	to {
+		stroke-dashoffset: -75;
+	}
 }

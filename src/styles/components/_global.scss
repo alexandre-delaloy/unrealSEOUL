@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
 }
+button:focus {outline:0;}
 .backgroundChange {
   background: $purple !important;
 }

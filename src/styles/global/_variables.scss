@@ -33,7 +33,7 @@ $white-opHrd: rgba(255,255,255,0.75);
 // linear-gradient
 $blueToPurple: linear-gradient(-0.125turn, $blue, $purple);
 $purpleToBlue: linear-gradient(-0.125turn, $purple, $blue) !important;
-$lBlueToWhite: linear-gradient(-0.125turn, #fff,  $lBlue);
+$BlueToWhite: linear-gradient(-0.125turn, #fff,  $blue);
 $dBlueToWhite: linear-gradient(-0.125turn, #fff, $dBlue);
 $purpleToWhite: linear-gradient(-0.125turn, #fff,  $purple);
 

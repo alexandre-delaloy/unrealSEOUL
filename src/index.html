@@ -19,15 +19,17 @@
       	</defs>
       	<path class="header_titleBox_logo_path" d="M 0,94 20,94 20,35 35,35 35,6 70,6 70,18, 95,18 95,95, 130,95" ></path>
       </svg>
-      <div class="header_title">
-        <h1 class="header_title_mainTitle">Unreal<span class="header_title_mainTitleSpan">Seoul</span></h1>
-        <h2 class="header_title_subTitle">Your Seoul’s interesting place reference</h2>
+      <div class="header_titleBox_title">
+        <h1 class="header_titleBox_title_mainTitle">Unreal<span class="header_titleBox_title_mainTitleSpan">Seoul</span></h1>
+        <h2 class="header_titleBox_title_subTitle">Your Seoul’s interesting place reference</h2>
       </div>
     </div>
     <div class="header_menu">
       <div class="header_menu_burger">
+        <div class="header_menu_burger_firstLine_before"></div>
         <div class=" header_menu_burger_firstLine"></div>
         <div class="header_menu_burger_lastLine"></div>
+        <div class="header_menu_burger_lastLine_after"></div>
       </div>
       <section class="header_menu_overlay">
         <ul class="header_menu_overlay_items">
@@ -41,12 +43,12 @@
     </div>
     <div class="header_typewriter">
 			<ul class="header_typewriter_items transition" data-flickity='{ "cellAlign": "left", "contain": true }'>
-        <li class="is-active header_typewriter_item">Namsan Tower</li>
-        <li class="header_typewriter_item">Seoul Forest</li>
-        <li class="header_typewriter_item">Gyeongbokgung</li>
-        <li class="header_typewriter_item">Lotte World</li>
-        <li class="header_typewriter_item">Myeong-dong</li>
-        <li class="header_typewriter_item">Gwanghwamun</li>
+        <div class="is-active header_typewriter_item">Namsan Tower</div>
+        <div class="header_typewriter_item">Seoul Forest</div>
+        <div class="header_typewriter_item">Gyeongbokgung</div>
+        <div class="header_typewriter_item">Lotte World</div>
+        <div class="header_typewriter_item">Myeong-dong</div>
+        <div class="header_typewriter_item">Gwanghwamun</div>
 			</ul>
 		</div>
 		<p class="right" style="display: none">&gt;</p>
@@ -58,13 +60,13 @@
 
     </div>
     <div class="header_music">
-      <div class="header_music_before header_music_before_pulse"></div>
-      <div class="header_music_after header_music_after_pulse"></div>
+      <div class="header_music_before header_music_before-pulse"></div>
+      <div class="header_music_after header_music_after-pulse"></div>
     </div>
     <div class="header_language">
       <p class=" language-active header_language_kr">KR</p>
       <p class="header_language_en">EN</p>
-      <div class="header_language_change header_language_change_toRight"></div>
+      <div class="header_language-change header_language-change-toRight"></div>
     </div>
   </header>
   <section class="method" id="method">
@@ -80,7 +82,13 @@
         <p class="method_box_article_text">3. Choose your schedule</p>
       </article>
     </div>
-    <a href="" class="method_link"></a>
+    <div class="method_button">
+      <svg version="1.1" class="method_button_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="530px" height="105px" viewBox="0 0 530 105"xml:space="preserve">
+    		<path class="method_button_svg_path1" d="M 50,50 480,50 480,55" ></path>
+    		<path class="method_button_svg_path2" d="M 480,55 50,55, 50,50" ></path>
+  	  </svg>
+  	  <button class="method_button_clickable" onClick="svgChange()">See the magic happen !</button>
+    </div>
   </section>
   <section class="wip">
     WIP, please wait ☺️
@@ -88,5 +96,17 @@
 
 
   <script src="./index.js"></script>
+  <script>
+    var svg = document.querySelector('.method_button_svg');
+    var path1 = document.querySelector('.method_button_svg_path1');
+    var path2 = document.querySelector('.method_button_svg_path2');
+
+    function svgChange() {
+      path1.setAttribute('d','M 2,2 528,2 528,104');
+      path1.setAttribute('stroke','transparent');
+      path2.setAttribute('d','M 528,102 2,102, 2,0');
+      path2.setAttribute('stroke','transparent');
+    };
+  </script>
 </body>
 </html>
