@@ -2,7 +2,7 @@
 
 ## What is Unreal**Seoul** ?
 
-Unreal**Seoul** is a fake tourism website for discover or *rediscover* Seoul 🇰🇷
+Unreal**Seoul** is a **fake** tourism website for discover or *rediscover* Seoul 🇰🇷
 
 > It's a **personnal** challenge to train myself and become better in *front-end* 🏅
 
@@ -12,3 +12,5 @@ Unreal**Seoul** is a fake tourism website for discover or *rediscover* Seoul �
 * `SCSS`
 * SVG 🌇
 * *Dozen of hours* ⏳
+
+👻
