@@ -50,13 +50,14 @@ button:focus {outline:0;}
 }
 
 .wip {
-  background: #fff;
+  background: url('../assets/imgs/bg/wip.jpg') no-repeat center;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: $NS-Lgh;
+  font-family: $NS-Reg;
   font-size: $Big;
 
 }

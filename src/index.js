@@ -48,7 +48,6 @@ var prevImg = function() {
 	if (counter > imgs.length - 1) {
 		images = document.querySelectorAll('.header_typewriter_item')
 		var node = images[images.length-1];
-		console.log(node)
 		carrouselWrap.insertBefore(node, carrouselWrap.childNodes[0]);
 		counter = 0
 		carrouselWrap.classList.remove('transition')
@@ -114,36 +113,7 @@ kr.addEventListener('click', function() {
 // SCOLLPOS
 var linear = document.querySelector('#colorToChange');
 
-window.addEventListener('scroll', function() {
-	if ( window.scrollY > 30) {
-		mute.classList.add('backgroundChange');
-		muteBefore.classList.add('backgroundChange');
-		muteAfter.classList.add('backgroundChange');
-		en.classList.add('colorChange');
-		kr.classList.add('colorChange');
-		change.classList.add('gradientBackgroundChange')
-	}
-	else {
-		mute.classList.remove('backgroundChange');
-		muteBefore.classList.remove('backgroundChange');
-		muteAfter.classList.remove('backgroundChange');
-		en.classList.remove('colorChange');
-		kr.classList.remove('colorChange');
-		change.classList.remove('gradientBackgroundChange')
-	}
-});
-window.addEventListener('scroll', function() {
-	if ( window.scrollY > document.querySelector('header').offsetHeight - 50) {
-		linear.setAttribute('stop-color', '#8B83FF');
-		firstLine.classList.add('backgroundChange');
-		lastLine.classList.add('backgroundChange');
-	}
-	else {
-		linear.setAttribute('stop-color', '#fff');
-		firstLine.classList.remove('backgroundChange');
-		lastLine.classList.remove('backgroundChange');
-	}
-});
+
 
 // TESTS
 // var beforealed = document.querySelector('.firstLine');
