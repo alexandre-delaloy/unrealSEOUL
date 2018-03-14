@@ -63,7 +63,7 @@
       }
       &_firstLine,
       &_lastLine {
-        background: #fff;
+        background: $purple;
         width: 30px;
         height: 2px;
         position: absolute;
@@ -74,7 +74,7 @@
       }
       &_firstLine_before,
       &_lastLine_after {
-        background: #fff;
+        background: $purple;
         width: 20px;
         height: 2px;
         position: absolute;
@@ -264,7 +264,7 @@
     }
   }
   &_music {
-    background: #fff;
+    background: $purple;
 	  width: 20px;
 	  height: 20px;
 	  border-radius: 100%;
@@ -278,7 +278,7 @@
     &_before,
     &_after {
       content:'';
-    	background: #fff;
+    	background: $purple;
     	width: 20px;
     	height: 20px;
     	border-radius: 100%;
@@ -289,12 +289,12 @@
       }
     }
     &_after {
-      background: #fff;
+      background: $purple;
       animation-delay: 1s;
     }
   }
   &_language {
-    color: #fff;
+    color: $purple;
     display: flex;
     align-items: flex-end;
     font-family: $NS-Reg;
@@ -312,7 +312,7 @@
       transition: all .25s ease;
     }
     &-change {
-      background: $purpleToBlue-opMed;
+      background: $whiteToBlue-opHrdTurned;
     	width: 50%;
     	height: 100%;
     	position: absolute;

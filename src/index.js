@@ -113,6 +113,71 @@ kr.addEventListener('click', function() {
 // SCOLLPOS
 var linear = document.querySelector('#colorToChange');
 
+window.addEventListener('scroll', function() {
+	if (window.scrollY < document.querySelector('.header').offsetHeight - 50) {
+		firstLine.classList.add('backgroundChange');
+		lastLine.classList.add('backgroundChange');
+		firstLineBefore.classList.add('backgroundChange');
+		lastLineAfter.classList.add('backgroundChange');
+		linear.setAttribute('stop-color', '#fff');
+	}
+	else if (window.scrollY < document.querySelector('.header').offsetHeight+ 600 ) {
+		firstLine.classList.remove('backgroundChange');
+		lastLine.classList.remove('backgroundChange');
+		firstLineBefore.classList.remove('backgroundChange');
+		lastLineAfter.classList.remove('backgroundChange');
+		linear.setAttribute('stop-color', '#8B83FF');
+	}
+	else if (window.scrollY < document.querySelector('.header').offsetHeight+ 1850 ) {
+		firstLine.classList.add('backgroundChange');
+		lastLine.classList.add('backgroundChange');
+		firstLineBefore.classList.add('backgroundChange');
+		lastLineAfter.classList.add('backgroundChange');
+		linear.setAttribute('stop-color', '#fff');
+	}
+	else {
+		firstLine.classList.remove('backgroundChange');
+		lastLine.classList.remove('backgroundChange');
+		firstLineBefore.classList.remove('backgroundChange');
+		lastLineAfter.classList.remove('backgroundChange');
+		linear.setAttribute('stop-color', '#8B83FF');
+	}
+});
+
+window.addEventListener('scroll', function() {
+	if (window.scrollY < 50) {
+		mute.classList.add('backgroundChange');
+		muteBefore.classList.add('backgroundChange');
+		muteAfter.classList.add('backgroundChange');
+		en.classList.add('colorChange');
+		kr.classList.add('colorChange');
+		change.classList.add('gradientBackgroundChange');
+	}
+	else if (window.scrollY < document.querySelector('.header').offsetHeight-35 ) {
+		mute.classList.remove('backgroundChange');
+		muteBefore.classList.remove('backgroundChange');
+		muteAfter.classList.remove('backgroundChange');
+		en.classList.remove('colorChange');
+		kr.classList.remove('colorChange');
+		change.classList.remove('gradientBackgroundChange');
+	}
+	else if (window.scrollY < document.querySelector('.header').offsetHeight+ 1225 ) {
+		mute.classList.add('backgroundChange');
+		muteBefore.classList.add('backgroundChange');
+		muteAfter.classList.add('backgroundChange');
+		en.classList.add('colorChange');
+		kr.classList.add('colorChange');
+		change.classList.add('gradientBackgroundChange');
+	}
+	else {
+		mute.classList.remove('backgroundChange');
+		muteBefore.classList.remove('backgroundChange');
+		muteAfter.classList.remove('backgroundChange');
+		en.classList.remove('colorChange');
+		kr.classList.remove('colorChange');
+		change.classList.remove('gradientBackgroundChange');
+	}
+});
 // SCROLL
 var gotoMethod = document.querySelector('.header_menu_overlay_item-1');
 

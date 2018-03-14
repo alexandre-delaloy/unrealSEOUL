@@ -3,13 +3,13 @@ body {
 }
 button:focus {outline:0;}
 .backgroundChange {
-  background: $purple !important;
+  background: #fff !important;
 }
 .colorChange {
-  color: $purple !important;
+  color: #fff !important;
 }
 .gradientBackgroundChange {
-  background: $whiteToBlue-opHrdTurned !important;
+  background: $purpleToBlue-opMed !important;
 }
 .is-active {
     opacity: 1 !important;
