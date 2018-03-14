@@ -9,6 +9,31 @@
     font-size: $xBig;
     text-align: center;
     padding: 35px;
+    position: relative;
+    &::before, &::after {
+      content:'';
+      background: #fff;
+      width: 66px;
+      height: 5px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0,-50%);
+      transition: all 0.3s ease-in-out;
+    }
+    &::before {
+      left: 26%;
+    }
+    &::after {
+      right: 26%;
+    }
+    &:hover:before {
+      background: $white-opHrd;
+      left: 70%;
+    }
+    &:hover:after {
+      background: $white-opHrd;
+      right: 70%;
+    }
   }
   &_box {
     padding-bottom: 35px;
@@ -23,6 +48,12 @@
                          "rdm-6 rdm-8 rdm-9 rdm-9";
     &_article {
       background: grey;
+      cursor: pointer;
+      transform: scale(1.0);
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.025);
+      }
       &:nth-child(1) {
         background: url('../assets/imgs/bg/random/random1.jpg') no-repeat center;
         background-size: cover;

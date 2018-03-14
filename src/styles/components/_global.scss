@@ -1,7 +1,10 @@
 body {
   overflow-x: hidden;
 }
-button:focus {outline:0;}
+button:focus {
+  outline: 0;
+}
+// CHANGING ELEMENTS
 .backgroundChange {
   background: #fff !important;
 }
@@ -60,4 +63,39 @@ button:focus {outline:0;}
   font-family: $NS-Reg;
   font-size: $Big;
 
+}
+.loading {
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  &_title {
+    color: #fff;
+    font-family: $NS-Lgh;
+    font-size: $Big;
+    margin-top: 35px;
+  }
+  &_svg {
+    &_path {
+      fill: transparent;
+      stroke-width: 4px;
+      stroke: #fff;
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation: dash666 2s infinite linear;
+    }
+    @keyframes dash666 {
+      to {
+        stroke-dashoffset: -100;
+      }
+    }
+  }
 }

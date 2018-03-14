@@ -188,3 +188,7 @@ gotoMethod.addEventListener('click', function() {
 });
 
 // TESTS
+var loading = document.querySelector('.loading');
+window.addEventListener("load", function() {
+	loading.classList.remove('is-active');
+});
