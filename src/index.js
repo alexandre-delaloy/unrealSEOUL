@@ -113,12 +113,13 @@ kr.addEventListener('click', function() {
 // SCOLLPOS
 var linear = document.querySelector('#colorToChange');
 
+// SCROLL
+var gotoMethod = document.querySelector('.header_menu_overlay_item-1');
 
+gotoMethod.addEventListener('click', function() {
+	document.querySelector('#method').scrollIntoView({
+				behavior: 'smooth',
+			});
+});
 
 // TESTS
-// var beforealed = document.querySelector('.firstLine');
-// var pls = window.getComputedStyle(beforealed, :before);
-
-console.log('start');
-// console.log(beforealed);
-console.log('end');

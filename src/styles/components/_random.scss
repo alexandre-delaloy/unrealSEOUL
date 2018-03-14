@@ -1,0 +1,73 @@
+.random {
+  background: url('../assets/imgs/bg/random_bg.jpg') no-repeat center fixed;
+  background-size: cover;
+  width: 100%;
+  &_title {
+    color: #fff;
+    font-family: $NS-Bld;
+    font-size: $xBig;
+    text-align: center;
+    padding: 35px;
+  }
+  &_box {
+    padding-bottom: 35px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(4, 250px);
+    grid-gap: 35px 35px;
+    grid-template-areas: "rdm-1 rdm-2 rdm-2 rdm-3"
+                         "rdm-4 rdm-4 rdm-5 rdm-3"
+                         "rdm-6 rdm-7 rdm-7 rdm-7"
+                         "rdm-6 rdm-8 rdm-9 rdm-9";
+    &_article {
+      background: grey;
+      &:nth-child(1) {
+        background: url('../assets/imgs/bg/random/random1.jpg') no-repeat center;
+        background-size: cover;
+        grid-area: rdm-1;
+      }
+      &:nth-child(2) {
+        background: url('../assets/imgs/bg/random/random2.jpg') no-repeat center;
+        background-size: cover;
+        grid-area: rdm-2;
+      }
+      &:nth-child(3) {
+        background: url('../assets/imgs/bg/random/random3.jpg') no-repeat center;
+        background-size: cover;
+        grid-area: rdm-3;
+      }
+      &:nth-child(4) {
+        background: url('../assets/imgs/bg/random/random4.jpg') no-repeat center;
+        background-size: cover;
+        grid-area: rdm-4;
+      }
+      &:nth-child(5) {
+        background: url('../assets/imgs/bg/random/random5.jpg') no-repeat center;
+        background-size: cover;
+        grid-area: rdm-5;
+      }
+      &:nth-child(6) {
+        background: url('../assets/imgs/bg/random/random6.jpg') no-repeat center;
+        background-size: cover;
+        grid-area: rdm-6;
+      }
+      &:nth-child(7) {
+        background: url('../assets/imgs/bg/random/random7.jpg') no-repeat center;
+        background-size: cover;
+        grid-area: rdm-7;
+      }
+      &:nth-child(8) {
+        background: url('../assets/imgs/bg/random/random8.jpg') no-repeat center;
+        background-size: cover;
+        grid-area: rdm-8;
+      }
+      &:nth-child(9) {
+        background: url('../assets/imgs/bg/random/random9.jpg') no-repeat center;
+        background-size: cover;
+        grid-area: rdm-9;
+      }
+    }
+
+  }
+}

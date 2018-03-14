@@ -123,67 +123,63 @@
         transform: translate(-50%, -50%);
       }
       &_item {
+        color: #fff;
+    	  width: 300px;
+    	  height: 75px;
+    	  margin: 10px;
+        padding: 0 10px;
+        font-size: $Big;
+        font-family: $NS-Lgh;
+    	  position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
         &:hover {
-          justify-content: flex-end;
+          letter-spacing: 2.5;
         }
-        &_link {
-          color: #fff;
-      	  width: 300px;
-      	  height: 75px;
-      	  margin: 10px;
-          font-size: $Big;
-          font-family: $NS-Lgh;
-      	  position: relative;
-          overflow: hidden;
-          text-decoration: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 0 10px;
-          transition: all 0.5s ease-in-out;
-          &:hover {
-            letter-spacing: 2.5;
-          }
-          &::before {
-            content:'';
-        		width: 0%;
-        		height: 200px;
-        		position: absolute;
-        		top: -50px;
-        		left: 0%;
-        		transform: rotate(0deg);
-          }
-        	&::after {
-            content:'';
-        		width: 0%;
-        		height: 200px;
-        		position: absolute;
-        		top: -50px;
-        		right: 0%;
-        		transform: rotate(0deg);
-        	}
-        	&:hover:before {
-        		animation: link-anim-l 0.5s ease-in-out;
-        	}
-          &:hover:after {
-        		animation: link-anim-r 0.5s ease-in-out;
-        	}
-          &-1::after,
-          &-1::before {
-            background: $purple;
-          }
-          &-2::after,
-          &-2::before {
-            background: $dBlue;
-          }
-          &-3::after,
-          &-3::before {
-            background: $blue;
-          }
-          &-4::after,
-          &-4::before {
-            background: $lBlue;
-          }
+        &::before {
+          content:'';
+      		width: 0%;
+      		height: 200px;
+      		position: absolute;
+      		top: -50px;
+      		left: 0%;
+      		transform: rotate(0deg);
+        }
+      	&::after {
+          content:'';
+      		width: 0%;
+      		height: 200px;
+      		position: absolute;
+      		top: -50px;
+      		right: 0%;
+      		transform: rotate(0deg);
+      	}
+      	&:hover:before {
+      		animation: link-anim-l 0.5s ease-in-out;
+      	}
+        &:hover:after {
+      		animation: link-anim-r 0.5s ease-in-out;
+      	}
+        &-1::after,
+        &-1::before {
+          background: $purple;
+        }
+        &-2::after,
+        &-2::before {
+          background: $dBlue;
+        }
+        &-3::after,
+        &-3::before {
+          background: $blue;
+        }
+        &-4::after,
+        &-4::before {
+          background: $lBlue;
         }
       }
       &-active {
