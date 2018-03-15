@@ -48,54 +48,54 @@
                          "rdm-6 rdm-8 rdm-9 rdm-9";
     &_article {
       background: grey;
-      cursor: pointer;
       transform: scale(1.0);
       transition: all 0.3s ease;
+      cursor: pointer;
       &:hover {
         transform: scale(1.025);
       }
       &:nth-child(1) {
-        background: url('../assets/imgs/bg/random/random1.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/random/random1min.jpg') no-repeat center;
         background-size: cover;
         grid-area: rdm-1;
       }
       &:nth-child(2) {
-        background: url('../assets/imgs/bg/random/random2.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/random/random2min.jpg') no-repeat center;
         background-size: cover;
         grid-area: rdm-2;
       }
       &:nth-child(3) {
-        background: url('../assets/imgs/bg/random/random3.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/random/random3min.jpg') no-repeat center;
         background-size: cover;
         grid-area: rdm-3;
       }
       &:nth-child(4) {
-        background: url('../assets/imgs/bg/random/random4.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/random/random4min.jpg') no-repeat center;
         background-size: cover;
         grid-area: rdm-4;
       }
       &:nth-child(5) {
-        background: url('../assets/imgs/bg/random/random5.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/random/random5min.jpg') no-repeat center;
         background-size: cover;
         grid-area: rdm-5;
       }
       &:nth-child(6) {
-        background: url('../assets/imgs/bg/random/random6.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/random/random6min.jpg') no-repeat center;
         background-size: cover;
         grid-area: rdm-6;
       }
       &:nth-child(7) {
-        background: url('../assets/imgs/bg/random/random7.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/random/random7min.jpg') no-repeat center;
         background-size: cover;
         grid-area: rdm-7;
       }
       &:nth-child(8) {
-        background: url('../assets/imgs/bg/random/random8.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/random/random8min.jpg') no-repeat center;
         background-size: cover;
         grid-area: rdm-8;
       }
       &:nth-child(9) {
-        background: url('../assets/imgs/bg/random/random9.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/random/random9min.jpg') no-repeat center;
         background-size: cover;
         grid-area: rdm-9;
       }
@@ -106,7 +106,7 @@
   &_imgBox {
     background: red;
     &_figure {
-      background: $black-opMed;
+      background: $black-opHrd;
       width: 100%;
       height: 100vh;
       display: flex;
@@ -114,10 +114,11 @@
       justify-content: center;
       align-items: center;
       position: fixed;
-      z-index: 3;
+      z-index: 5;
       top: 0;
       left: 0;
       transform: scale(0);
+      transition: all 0.3s ease;
       &_img {
         height: 75vh;
       }

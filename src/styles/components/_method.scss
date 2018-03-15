@@ -84,17 +84,17 @@
           color: $blue;
       }
       &:nth-child(1) {
-        background: url('../assets/imgs/bg/method/method1.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/method/method1min.jpg') no-repeat center;
         background-size: cover;
         border-image: $purpleToWhite 30;
       }
       &:nth-child(2) {
-        background: url('../assets/imgs/bg/method/method2.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/method/method2min.jpg') no-repeat center;
         background-size: cover;
         border-image: $dBlueToWhite 30;
       }
       &:nth-child(3) {
-        background: url('../assets/imgs/bg/method/method3.jpg') no-repeat center;
+        background: url('../assets/imgs/bg/method/method3min.jpg') no-repeat center;
         background-size: cover;
         border-image: $BlueToWhite 30;
       }

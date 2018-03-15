@@ -21,6 +21,10 @@ button:focus {
 .over {
   opacity: 0.75;
 }
+.scaled {
+  transform: scale(1) !important;
+}
+
 // SCROLLBAR
 ::-webkit-scrollbar {
    	width: 10px;
@@ -54,18 +58,42 @@ button:focus {
   font-family: $NS-Lgh;
 }
 
-.wip {
-  background: url('../assets/imgs/bg/wip.jpg') no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: $NS-Reg;
-  font-size: $Big;
+// CROSS
+.cross {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  TOP: 25px;
+  right: 25px;
+  z-index: 6;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease 0.2s;
+  &::before, &::after {
+    content: '';
+    background: #fff;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+  }
+  &::after {
+    content: '';
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  &:hover:before, &:hover:after {
+    transform: translate(-50%, -50%) rotate(270deg);
+  }
 
 }
+
+// LOADING SCREEN
 .loading {
   background: $black-opHrd;
   width: 100%;
@@ -100,4 +128,18 @@ button:focus {
       }
     }
   }
+}
+
+// WIP
+.wip {
+  background: url('../assets/imgs/bg/wip.jpg') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $NS-Reg;
+  font-size: $Big;
+
 }

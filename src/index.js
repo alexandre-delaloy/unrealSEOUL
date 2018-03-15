@@ -219,6 +219,20 @@ for (let a = 0; a < randomArticle.length; a++) {
 }
 // DEPLOY IMGS
 var randomFig = document.querySelectorAll('.random_imgBox_figure');
+var randomFigText = document.querySelectorAll('.random_imgBox_figure_figcaption');
+var cross = document.querySelector('.cross');
+for (let i = 0; i < randomArticle.length; i++) {
+	randomArticle[i].addEventListener('click', function() {
+		randomFig[i].classList.add('scaled');
+		randomFigText[i].classList.add('tracking-in-contract');
+		cross.classList.add('is-active')
+	});
+	cross.addEventListener('click', function() {
+			randomFig[i].classList.remove('scaled');
+			cross.classList.remove('is-active')
+	});
+}
+
 
 // TESTS
 var loading = document.querySelector('.loading');
