@@ -31,6 +31,10 @@ burger.addEventListener('click', function() {
 for (var i = 0; i < items.length; i++) {
   items[i].addEventListener('click', function() {
     menu.classList.toggle('header_menu_overlay-active');
+		firstLine.classList.toggle('header_menu_burger_firstLine-anim');
+		firstLineBefore.classList.toggle('header_menu_burger_firstLine-befafter');
+	  lastLine.classList.toggle('header_menu_burger_lastLine-anim');
+		lastLineAfter.classList.toggle('header_menu_burger_firstLine-befafter');
   });
 }
 // TYPEWRITER
@@ -178,14 +182,43 @@ window.addEventListener('scroll', function() {
 		change.classList.remove('gradientBackgroundChange');
 	}
 });
+
 // SCROLL
 var gotoMethod = document.querySelector('.header_menu_overlay_item-1');
+var gotoRandom = document.querySelector('.header_menu_overlay_item-2');
 
 gotoMethod.addEventListener('click', function() {
 	document.querySelector('#method').scrollIntoView({
 				behavior: 'smooth',
 			});
 });
+gotoRandom.addEventListener('click', function() {
+	document.querySelector('#random').scrollIntoView({
+				behavior: 'smooth',
+			});
+});
+
+// NOTME
+var randomArticle = document.querySelectorAll('.random_box_article');
+
+for (let a = 0; a < randomArticle.length; a++) {
+  randomArticle[a].addEventListener('mouseover', function() {
+      console.log(a)
+      for (var i = 0; i < randomArticle.length; i++) {
+          if (i !== a) {
+              randomArticle[i].classList.add('over');
+          }
+      }
+  });
+
+  randomArticle[a].addEventListener('mouseout', function() {
+      for (var i = 0; i < randomArticle.length; i++) {
+          randomArticle[i].classList.remove('over');
+      }
+  });
+}
+// DEPLOY IMGS
+var randomFig = document.querySelectorAll('.random_imgBox_figure');
 
 // TESTS
 var loading = document.querySelector('.loading');

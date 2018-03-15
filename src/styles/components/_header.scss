@@ -303,6 +303,26 @@
     right: 25px;
     bottom: 25px;
     z-index: 2;
+    &::after {
+      content: 'COMMING SOON ! 😁';
+      color: #fff;
+      background: rgba(0,0,0,0.75);
+      width: 200px;
+      height: 50px;
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      bottom: 25px;
+      transform: scale(0);
+      transform-origin: right bottom;
+      transition: all 0.3s ease;
+    }
+    &:hover:after {
+      transform: scale(1);
+    }
     &_en,
     &_kr {
       cursor: pointer;

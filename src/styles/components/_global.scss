@@ -18,7 +18,9 @@ button:focus {
     opacity: 1 !important;
     visibility: visible !important;
 }
-
+.over {
+  opacity: 0.75;
+}
 // SCROLLBAR
 ::-webkit-scrollbar {
    	width: 10px;
@@ -65,7 +67,7 @@ button:focus {
 
 }
 .loading {
-  background: rgba(0,0,0,0.9);
+  background: $black-opHrd;
   width: 100%;
   height: 100vh;
   display: flex;

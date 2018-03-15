@@ -11,6 +11,21 @@
     font-size: $xBig;
     text-align: center;
     padding: 40px;
+    position: relative;
+    &::after {
+      content: '';
+      background: $purpleToBlue;
+      width: 0%;
+      height: 4px;
+      position: absolute;
+      top: 85px;
+      left: 50%;
+      transition: all 0.3s ease;
+    }
+    &:hover:after {
+      width: 54%;
+      left: 23%;
+    }
   }
   &_box {
     display: grid;
