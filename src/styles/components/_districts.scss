@@ -1,5 +1,6 @@
 .district {
-  background: $blueToPurple-opLgh;
+  background: url('../assets/imgs/bg/random_bg.jpg') no-repeat center fixed;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -9,7 +10,7 @@
   position: relative;
   &_title {
     color: $purple-opMed;
-    background: $white-opSml;
+    background: $white-opReg;
     font-family: $NS-sBld;
     font-size: $Big;
     padding: 25px;
@@ -26,11 +27,11 @@
   }
   &_svg {
     &_path {
-      fill: #C8C8C8;
+      fill: $medWhite;
       cursor: pointer;
       transition: all 0.25s ease;
       &:hover {
-        fill: $blue;
+        fill: $purple-opMed;
       }
     }
   }

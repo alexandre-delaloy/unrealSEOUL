@@ -1,6 +1,5 @@
 .random {
-  background: url('../assets/imgs/bg/random_bg.jpg') no-repeat center fixed;
-  background-size: cover;
+  background: $purpleToBlue-opLgh;
   width: 100%;
   height: 1250px;
   &_title {

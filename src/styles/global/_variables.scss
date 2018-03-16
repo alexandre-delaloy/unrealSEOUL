@@ -47,6 +47,7 @@ $purpleToWhite: linear-gradient(-0.125turn, #fff,  $purple);
 
 $purpleToBlue-opMed: linear-gradient(-0.125turn, $purple-opMed, $blue-opMed);
 $blueToPurple-opLgh:  linear-gradient( $blue-opLgh, $purple-opLgh);
+$purpleToBlue-opLgh:  linear-gradient( $purple-opLgh, $blue-opLgh);
 $blueToPurple-opMed:  linear-gradient(-0.125turn, $blue-opMed, $purple-opMed);
 $blueToWhite-opSml: linear-gradient($blue-opSml, $white-opSml);
 $whiteToBlue-opSml: linear-gradient($white-opSml, $blue-opSml);
