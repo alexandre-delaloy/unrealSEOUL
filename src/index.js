@@ -186,16 +186,22 @@ window.addEventListener('scroll', function() {
 // SCROLL
 var gotoMethod = document.querySelector('.header_menu_overlay_item-1');
 var gotoRandom = document.querySelector('.header_menu_overlay_item-2');
+var gotoDistrict = document.querySelector('.header_menu_overlay_item-3');
 
 gotoMethod.addEventListener('click', function() {
 	document.querySelector('#method').scrollIntoView({
-				behavior: 'smooth',
-			});
+		behavior: 'smooth',
+	});
 });
 gotoRandom.addEventListener('click', function() {
 	document.querySelector('#random').scrollIntoView({
-				behavior: 'smooth',
-			});
+		behavior: 'smooth',
+	});
+});
+gotoDistrict.addEventListener('click', function() {
+	document.querySelector('#district').scrollIntoView({
+		behavior: 'smooth',
+	});
 });
 
 // NOTME
@@ -229,10 +235,22 @@ for (let i = 0; i < randomArticle.length; i++) {
 	});
 	cross.addEventListener('click', function() {
 			randomFig[i].classList.remove('scaled');
+			randomFigText[i].classList.remove('tracking-in-contract');
 			cross.classList.remove('is-active')
 	});
 }
 
+// DISTRICTS
+var districtPath = document.querySelectorAll('.district_svg_path');
+var districtName = document.querySelector('.district_name');
+
+for (let i = 0; i < districtPath.length; i++) {
+	districtPath[i].addEventListener('mouseover', function() {
+		var districtID = districtPath[i].getAttribute('id');
+		console.log(districtID);
+		districtName.textContent = districtID;
+	});
+}
 
 // TESTS
 var loading = document.querySelector('.loading');

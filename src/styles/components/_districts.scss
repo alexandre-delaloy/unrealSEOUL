@@ -1,0 +1,37 @@
+.district {
+  background: $blueToPurple-opLgh;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &_title {
+    color: $purple-opMed;
+    background: $white-opSml;
+    font-family: $NS-sBld;
+    font-size: $Big;
+    padding: 25px;
+    margin-top: 25px;
+  }
+  &_name {
+    color: $ddBlue;
+    font-family: $NS-Bld;
+    font-size: $xBig;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &_svg {
+    &_path {
+      fill: #C8C8C8;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      &:hover {
+        fill: $blue;
+      }
+    }
+  }
+}

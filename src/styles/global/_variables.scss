@@ -14,19 +14,24 @@ $Reg: 2rem;
 $Sml: 1.8rem;
 
 // colors
+
 $medWhite: #F9F9F9;
 $xlBlue: #EAF2FF;
 $lBlue: #83F0FF;
 $blue: #82D3FF;
 $dBlue: #85B6FF;
+$ddBlue: #264576;
 $xdBlue: #022965;
 $purple: #8B83FF;
 
 // rgba()
+$blue-opLgh: rgba(130, 211, 255, 0.25);
 $blue-opMed: rgba(130, 211, 255, 0.75);
 $blue-opSml: rgba(0, 224, 255, 0.33);
+$purple-opLgh: rgba(139, 131, 255, 0.25);
 $purple-opMed: rgba(139, 131, 255, 0.75);
 $white-opSml: rgba(255,255,255,0.25);
+$white-opMedMin: rgba(255,255,255,0.33);
 $white-opReg: rgba(255,255,255,0.5);
 $white-opHrd: rgba(255,255,255,0.75);
 $black-opHrd: rgba(0,0,0,0.9);
@@ -41,6 +46,7 @@ $dBlueToWhite: linear-gradient(-0.125turn, #fff, $dBlue);
 $purpleToWhite: linear-gradient(-0.125turn, #fff,  $purple);
 
 $purpleToBlue-opMed: linear-gradient(-0.125turn, $purple-opMed, $blue-opMed);
+$blueToPurple-opLgh:  linear-gradient( $blue-opLgh, $purple-opLgh);
 $blueToPurple-opMed:  linear-gradient(-0.125turn, $blue-opMed, $purple-opMed);
 $blueToWhite-opSml: linear-gradient($blue-opSml, $white-opSml);
 $whiteToBlue-opSml: linear-gradient($white-opSml, $blue-opSml);
