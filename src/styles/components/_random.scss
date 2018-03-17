@@ -50,8 +50,24 @@
       transform: scale(1.0);
       transition: all 0.3s ease;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
       &:hover {
         transform: scale(1.025);
+      }
+      &::before {
+        content: '';
+        background: radial-gradient(rgba(225,225,225,0.15), rgba(255,255,255,0.15));
+        width: 200px;
+        height: 200%;
+        position: absolute;
+        transform: rotate(25deg);
+        top: -50%;
+        left: -150%;
+      }
+      &:hover:before {
+        left: 150%;
+        transition: all 0.5s;
       }
       &:nth-child(1) {
         background: url('../assets/imgs/bg/random/random1min.jpg') no-repeat center;

@@ -4,6 +4,9 @@ body {
 button:focus {
   outline: 0;
 }
+input:focus {
+  outline: 0;
+}
 // CHANGING ELEMENTS
 .backgroundChange {
   background: #fff !important;

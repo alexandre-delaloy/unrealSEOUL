@@ -184,10 +184,15 @@ window.addEventListener('scroll', function() {
 });
 
 // SCROLL
-var gotoMethod = document.querySelector('.header_menu_overlay_item-1');
-var gotoRandom = document.querySelector('.header_menu_overlay_item-2');
-var gotoDistrict = document.querySelector('.header_menu_overlay_item-3');
-
+var gotoHome = document.querySelector('.header_menu_overlay_item-1');
+var gotoMethod = document.querySelector('.header_menu_overlay_item-2');
+var gotoRandom = document.querySelector('.header_menu_overlay_item-3');
+var gotoDistrict = document.querySelector('.header_menu_overlay_item-4');
+gotoHome.addEventListener('click', function() {
+	document.querySelector('#header').scrollIntoView({
+		behavior: 'smooth',
+	});
+});
 gotoMethod.addEventListener('click', function() {
 	document.querySelector('#method').scrollIntoView({
 		behavior: 'smooth',
@@ -206,23 +211,23 @@ gotoDistrict.addEventListener('click', function() {
 
 // NOTME
 var randomArticle = document.querySelectorAll('.random_box_article');
-
-for (let a = 0; a < randomArticle.length; a++) {
-  randomArticle[a].addEventListener('mouseover', function() {
-      console.log(a)
-      for (var i = 0; i < randomArticle.length; i++) {
-          if (i !== a) {
-              randomArticle[i].classList.add('over');
-          }
-      }
-  });
-
-  randomArticle[a].addEventListener('mouseout', function() {
-      for (var i = 0; i < randomArticle.length; i++) {
-          randomArticle[i].classList.remove('over');
-      }
-  });
-}
+// 
+// for (let a = 0; a < randomArticle.length; a++) {
+//   randomArticle[a].addEventListener('mouseover', function() {
+//       console.log(a)
+//       for (var i = 0; i < randomArticle.length; i++) {
+//           if (i !== a) {
+//               randomArticle[i].classList.add('over');
+//           }
+//       }
+//   });
+//
+//   randomArticle[a].addEventListener('mouseout', function() {
+//       for (var i = 0; i < randomArticle.length; i++) {
+//           randomArticle[i].classList.remove('over');
+//       }
+//   });
+// }
 // DEPLOY IMGS
 var randomFig = document.querySelectorAll('.random_imgBox_figure');
 var randomFigText = document.querySelectorAll('.random_imgBox_figure_figcaption');

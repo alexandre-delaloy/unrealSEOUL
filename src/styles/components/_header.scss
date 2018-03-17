@@ -115,7 +115,7 @@
       &_items {
         position: absolute;
         top: 50%;
-        height: 350px;
+        height: 400px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -126,7 +126,6 @@
         color: #fff;
     	  width: 300px;
     	  height: 75px;
-    	  margin: 10px;
         padding: 0 10px;
         font-size: $Big;
         font-family: $NS-Lgh;
@@ -180,6 +179,10 @@
         &-4::after,
         &-4::before {
           background: $lBlue;
+        }
+        &-5::after,
+        &-5::before {
+          background: $xlBlue;
         }
       }
       &-active {
