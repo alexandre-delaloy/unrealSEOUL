@@ -1,63 +1,105 @@
 .footer {
-  background: darkcyan;
+  background: url('../assets/imgs/bg/footer_bg.jpg') no-repeat center;
+  background-size: cover;
   width: 100%;
   height: 300px;
   position: relative;
-  &_box {
-    background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &_nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: 25px 35px;
+    padding: 25px 0;
+    position: relative;
+    &:after {
+      content:'';
+      background: #fff;
+      width: 95%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
     &_title {
       display: flex;
+      align-items: center;
+      padding: 0 35px;
       &_svg {
-        width: 0;
-        height: 0;
+        &_path {
+          fill: none;
+        	stroke: url(#linear);
+        	stroke-width: 12px;
+        }
       }
-      &_simple {
+      &_light {
         color: #fff;
         font-family: $NS-xLgh;
         font-size: $Big;
-
-
-        &_span {
+        &_bold {
           font-family: $NS-Bld;
         }
       }
-
     }
-    &_elements {
+    &_items {
       display: flex;
       align-items: center;
-    }
-    &_element {
-      color: #fff;
-      font-family: $NS-Bld;
-      font-size: $Sml;
-      margin-left: 35px;
-      cursor: pointer;
+      padding: 0 35px;
+      &_item {
+        color: #fff;
+        font-family: $NS-Bld;
+        font-size: $Sml;
+        margin-left: 35px;
+        cursor: pointer;
+      }
     }
   }
   &_warning {
     color: #fff;
     font-family: $NS-Bld;
     font-size: $Med;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     &_span {
       color: #ff8484;
     }
   }
-  &_nav {
+  &_social {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 0 35px 0;
     &_text {
       color: #fff;
       font-family: $NS-xLgh;
-      font-size:
+      font-size: $Sml;
+      padding: 0 75px;
+      &_link {
+        color: #fff;
+        text-decoration: none;
+        font-family: $NS-sBld;
+        font-size: $Reg;
+        position: relative;
+        z-index: 1;
+        margin-left: 5px;
+        &:after {
+          content: '';
+          background: $blueToPurple;
+          width: 104%;
+          height: 3px;
+          position: absolute;
+          z-index: -1;
+          left: -2%;
+          bottom: -5px;
+          transition: all 0.3s ease;
+        }
+        &:hover:after {
+          height: 35px;
+        }
+      }
     }
   }
 }

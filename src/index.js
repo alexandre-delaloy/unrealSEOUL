@@ -173,13 +173,21 @@ window.addEventListener('scroll', function() {
 		kr.classList.add('colorChange');
 		change.classList.add('gradientBackgroundChange');
 	}
-	else {
+	else if (window.scrollY < document.querySelector('.header').offsetHeight+ 1225 + document.querySelector('#district').offsetHeight) {
 		mute.classList.remove('backgroundChange');
 		muteBefore.classList.remove('backgroundChange');
 		muteAfter.classList.remove('backgroundChange');
 		en.classList.remove('colorChange');
 		kr.classList.remove('colorChange');
 		change.classList.remove('gradientBackgroundChange');
+	}
+	else {
+		mute.classList.add('backgroundChange');
+		muteBefore.classList.add('backgroundChange');
+		muteAfter.classList.add('backgroundChange');
+		en.classList.add('colorChange');
+		kr.classList.add('colorChange');
+		change.classList.add('gradientBackgroundChange');
 	}
 });
 
@@ -211,7 +219,7 @@ gotoDistrict.addEventListener('click', function() {
 
 // NOTME
 var randomArticle = document.querySelectorAll('.random_box_article');
-// 
+//
 // for (let a = 0; a < randomArticle.length; a++) {
 //   randomArticle[a].addEventListener('mouseover', function() {
 //       console.log(a)
@@ -246,6 +254,7 @@ for (let i = 0; i < randomArticle.length; i++) {
 }
 
 // DISTRICTS
+var district = document.querySelector('#district')
 var districtPath = document.querySelectorAll('.district_svg_path');
 var districtName = document.querySelector('.district_name');
 
