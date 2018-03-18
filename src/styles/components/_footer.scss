@@ -55,6 +55,26 @@
         font-size: $Sml;
         margin-left: 35px;
         cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+        &:hover {
+          color: #000
+        }
+        &:before {
+          content: '';
+          background: #fff;
+          width: 110%;
+          height: 0%;
+          position: absolute;
+          transition: all 0.3s ease;
+          z-index: -1;
+          left: -5%;
+          top: -10%;
+        }
+        &:hover:before {
+          height: 120%;
+        }
       }
     }
   }
@@ -71,12 +91,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 0 35px 0;
     &_text {
       color: #fff;
       font-family: $NS-xLgh;
       font-size: $Sml;
-      padding: 0 75px;
+      margin: 0 75px 30px 75px;
       &_link {
         color: #fff;
         text-decoration: none;
@@ -98,6 +117,43 @@
         }
         &:hover:after {
           height: 35px;
+        }
+      }
+    }
+    &_items {
+      width: 120px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 100px 24px 0;
+      &_item {
+        background: green;
+        width: 30px;
+        height: 30px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:nth-child(1) {
+          background: url('../assets/imgs/icons/github.svg') no-repeat center;
+          background-size: 100%;
+          &:hover {
+            background: url('../assets/imgs/icons/github-anim.svg') no-repeat center;
+            background-size: 100%;
+          }
+        }
+        &:nth-child(2) {
+          background: url('../assets/imgs/icons/linkedin.svg') no-repeat center;
+          background-size: 100%;
+          &:hover {
+            background: url('../assets/imgs/icons/linkedin-anim.svg') no-repeat center;
+            background-size: 100%;
+          }
+        }
+        &:nth-child(3) {
+          background: url('../assets/imgs/icons/instagram.svg') no-repeat center;
+          background-size: 100%;
+          &:hover {
+            background: url('../assets/imgs/icons/instagram-anim.svg') no-repeat center;
+            background-size: 100%;
+          }
         }
       }
     }
