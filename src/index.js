@@ -125,14 +125,19 @@ window.addEventListener('scroll', function() {
 		lastLineAfter.classList.add('backgroundChange');
 		linear.setAttribute('stop-color', '#fff');
 	}
-	else if (window.scrollY < document.querySelector('.header').offsetHeight+ 600 ) {
+	else if (window.scrollY < document.querySelector('.header').offsetHeight
+													+ document.querySelector('.method').offsetHeight
+													- 50 ) {
 		firstLine.classList.remove('backgroundChange');
 		lastLine.classList.remove('backgroundChange');
 		firstLineBefore.classList.remove('backgroundChange');
 		lastLineAfter.classList.remove('backgroundChange');
 		linear.setAttribute('stop-color', '#8B83FF');
 	}
-	else if (window.scrollY < document.querySelector('.header').offsetHeight+ 1850 ) {
+	else if (window.scrollY < document.querySelector('.header').offsetHeight
+													+ document.querySelector('.method').offsetHeight
+													+ document.querySelector('.random').offsetHeight
+													- 50 ) {
 		firstLine.classList.add('backgroundChange');
 		lastLine.classList.add('backgroundChange');
 		firstLineBefore.classList.add('backgroundChange');
@@ -268,6 +273,6 @@ for (let i = 0; i < districtPath.length; i++) {
 
 // TESTS
 var loading = document.querySelector('.loading');
-window.addEventListener("load", function() {
+window.setTimeout(function() {
 	loading.classList.remove('is-active');
-});
+},5000);
