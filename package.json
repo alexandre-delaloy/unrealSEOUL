@@ -1,10 +1,10 @@
 {
-  "name": "test_parcel",
+  "name": "unrealSEOUL",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --no-cache --public-url ./"
+    "build": "parcel build src/index.html --no-cache"
   },
   "author": "alexdll",
   "license": "ISC",

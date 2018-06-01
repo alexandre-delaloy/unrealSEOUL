@@ -154,7 +154,7 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-	if (window.scrollY < 50) {
+	if (window.scrollY < 35) {
 		mute.classList.add('backgroundChange');
 		muteBefore.classList.add('backgroundChange');
 		muteAfter.classList.add('backgroundChange');
@@ -162,7 +162,8 @@ window.addEventListener('scroll', function() {
 		kr.classList.add('colorChange');
 		change.classList.add('gradientBackgroundChange');
 	}
-	else if (window.scrollY < document.querySelector('.header').offsetHeight-35 ) {
+	else if (window.scrollY < document.querySelector('.header').offsetHeight
+														- 35 ) {
 		mute.classList.remove('backgroundChange');
 		muteBefore.classList.remove('backgroundChange');
 		muteAfter.classList.remove('backgroundChange');
@@ -170,7 +171,9 @@ window.addEventListener('scroll', function() {
 		kr.classList.remove('colorChange');
 		change.classList.remove('gradientBackgroundChange');
 	}
-	else if (window.scrollY < document.querySelector('.header').offsetHeight+ 1225 ) {
+	else if (window.scrollY < document.querySelector('.header').offsetHeight
+													+ document.querySelector('.method').offsetHeight
+													- 35 ) {
 		mute.classList.add('backgroundChange');
 		muteBefore.classList.add('backgroundChange');
 		muteAfter.classList.add('backgroundChange');
@@ -178,7 +181,10 @@ window.addEventListener('scroll', function() {
 		kr.classList.add('colorChange');
 		change.classList.add('gradientBackgroundChange');
 	}
-	else if (window.scrollY < document.querySelector('.header').offsetHeight+ 1225 + document.querySelector('#district').offsetHeight) {
+	else if (window.scrollY < document.querySelector('.header').offsetHeight
+													+ document.querySelector('.method').offsetHeight
+													+ document.querySelector('.random').offsetHeight
+													- 35 ) {
 		mute.classList.remove('backgroundChange');
 		muteBefore.classList.remove('backgroundChange');
 		muteAfter.classList.remove('backgroundChange');
@@ -275,4 +281,27 @@ for (let i = 0; i < districtPath.length; i++) {
 var loading = document.querySelector('.loading');
 window.setTimeout(function() {
 	loading.classList.remove('is-active');
+
 },5000);
+
+console.log(document.querySelector('.random').offsetHeight);
+
+
+var headerButton = document.querySelector('.header_button_search');
+headerButton.addEventListener('click', function() {
+	scroll();
+})
+function scroll() {
+	function scrollDown() {
+		document.querySelector('.footer').scrollIntoView({
+			behavior: 'smooth',
+		});
+	}
+	function scrollUp() {
+		document.querySelector('.header').scrollIntoView({
+			behavior: 'smooth',
+		});
+	}
+}
+
+// var intervalID2 = window.setInterval(scroll, 2000);
