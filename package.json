@@ -1,20 +1,45 @@
 {
-  "name": "unrealSEOUL",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "front-end-starter",
+  "version": "2.0.0",
+  "description": "a simplified front-end starter using gulp",
+  "browserslist": "> 0.25%, not dead",
+  "main": "src/js/app.js",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --no-cache"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "alexdll",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blyndusk/front-end-starter.git"
+  },
+  "keywords": [
+    "front-end",
+    "starter",
+    "gulp"
+  ],
+  "author": "https://github.com/blyndusk",
   "license": "ISC",
-  "dependencies": {
-    "autoprefixer": "^8.0.0",
-    "flexboxgrid": "^6.3.1",
-    "node-sass": "^4.7.2",
-    "parcel-bundler": "^1.6.2"
+  "bugs": {
+    "url": "https://github.com/blyndusk/front-end-starter/issues"
   },
+  "homepage": "https://github.com/blyndusk/front-end-starter#readme",
+  "dependencies": {},
   "devDependencies": {
-    "babel-preset-env": "^1.6.1"
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "browser-sync": "^2.26.3",
+    "eslint": "^5.7.0",
+    "eslint-plugin-import": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-resolve-url": "0.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify-es": "^1.0.4",
+    "node-sass": "^4.9.4",
+    "webpack-stream": "^5.1.1"
   }
 }
