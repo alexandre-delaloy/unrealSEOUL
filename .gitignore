@@ -1,5 +1,8 @@
 # I will not push the public version
 public/*
+.parcel-cache
+dist
+
 # But I'll keep the folder, so I add .gitkeep
 !public/.gitkeep
 

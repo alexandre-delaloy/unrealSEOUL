@@ -47,7 +47,7 @@
         width: 550px;
         height: 150%;
         background: $medWhite;
-        @include boxshadow(10px, 10px, 58px, -13px, rgba(0,0,0,0.75))
+        @include boxshadow(10px, 10px, 58px, -13px, rgba(0,0,0,0.75));
         position: absolute;
         top: -75%;
         right: 9%;
