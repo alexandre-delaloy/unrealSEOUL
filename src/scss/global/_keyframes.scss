@@ -197,3 +197,21 @@
     opacity: 1;
   }
 }
+
+@keyframes loading {
+	0%   {
+		background-color: $xdBlue;
+	}
+	100%   {
+		background-color: $purple;
+	}
+}
+
+@-webkit-keyframes loading {
+	0%   {
+		background-color: $xdBlue;
+	}
+	100%   {
+		background-color: $purple;
+	}
+}

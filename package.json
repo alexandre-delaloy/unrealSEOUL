@@ -1,23 +1,15 @@
 {
-  "name": "unr_seoul",
-  "version": "1.0.0",
-  "source": "src/index.html",
-  "description": "",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "main": "index.js",
+  "name": "unreal-seoul",
+  "version": "1.1.0",
+  "description": "A fake tourism website for (re)discover Seoul, South Korea",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel",
-    "build": "parcel build",
-    "babel": "babel src/js -d src/lib"
+    "dev": "vite dev",
+    "build": "vite build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
-    "@parcel/transformer-sass": "^2.0.1",
-    "parcel": "^2.0.1"
-  }
+    "sass": "^1.86.0",
+    "vite": "^6.2.3"
+  },
+  "author": "Alexandre Delaloy",
+  "license": "MIT"
 }

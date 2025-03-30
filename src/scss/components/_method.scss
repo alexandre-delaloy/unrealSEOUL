@@ -49,7 +49,7 @@
         background: $medWhite;
         @include boxshadow(10px, 10px, 58px, -13px, rgba(0,0,0,0.75));
         position: absolute;
-        top: -75%;
+        top: -70%;
         right: 9%;
         transform: rotate(-45deg);
 
@@ -57,7 +57,7 @@
       }
       &::after {
         content: '';
-        background: $white-opMedMin;
+        background: $white-opHrd;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -72,7 +72,7 @@
         opacity: 0;
       }
       &:hover:after {
-        background: rgba(0,0,0,0);
+        background: transparent
       }
       &:nth-of-type(1) &_text {
           color: $purple;
@@ -99,11 +99,12 @@
         border-image: $BlueToWhite 30;
       }
       &_text {
-        background: rgba(0,0,0,0);
+        background: transparent;
         padding: 15px;
         font-family: $NS-sBld;
         font-size: $Med;
         position: relative;
+        z-index: 1;
         transition: all 0.5s ease;
       }
       &:hover > .method_box_article_text{
@@ -133,7 +134,7 @@
       background: $purpleToBlue-opMed;
     	color: #fff;
     	font-size: 24px;
-    	font-family: "Nunito Sans";
+    	font-family: $NS-Lgh;
     	border: 4px #fff solid;
     	width: 500px;
     	height: 75px;
