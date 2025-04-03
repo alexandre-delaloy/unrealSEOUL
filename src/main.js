@@ -1,11 +1,5 @@
 import "./scss/main.scss"
 
-// START AUDIO
-window.addEventListener("click", function () {
-  document.getElementById("audio").play()
-});
-
-
 // PARALLAX
 window.addEventListener("scroll", function () {
   var slider = document.querySelector(".header");
@@ -81,7 +75,7 @@ inputBox.addEventListener('click', function () {
   input.removeAttribute('value');
   input.setAttribute('placeholder', ' : enter what you want to visit');
   input.classList.add('header_button_input-anim');
-  search.classList.add('loading-active');
+  search.classList.add('loader_active');
 }); // MUTE
 
 var audio = document.getElementById('audio');
@@ -231,12 +225,12 @@ for (let i = 0; i < randomArticle.length; i++) {
   randomArticle[i].addEventListener('click', function () {
     randomFig[i].classList.add('scaled');
     randomFigText[i].classList.add('tracking-in-contract');
-    cross.classList.add('loading-active');
+    cross.classList.add('loader_active');
   });
   cross.addEventListener('click', function () {
     randomFig[i].classList.remove('scaled');
     randomFigText[i].classList.remove('tracking-in-contract');
-    cross.classList.remove('loading-active');
+    cross.classList.remove('loader_active');
   });
 } // DISTRICTS
 
@@ -254,10 +248,16 @@ for (let i = 0; i < districtPath.length; i++) {
 } // TESTS
 
 
-var loading = document.querySelector('.loading');
-window.setTimeout(function () {
-  loading.classList.remove('loading-active');
+var loader = document.querySelector('.loader');
+var loaderEnter = document.querySelector('.loader_enter');
+setTimeout(() => {
+  loaderEnter.style.display = "block"
 }, 2000);
+loaderEnter.addEventListener("click", function () {
+  loader.classList.remove('loader_active');
+  document.getElementById("audio").play()
+});
+
 console.log(document.querySelector('.random').offsetHeight);
 var headerButton = document.querySelector('.header_button_search');
 headerButton.addEventListener('click', function () {

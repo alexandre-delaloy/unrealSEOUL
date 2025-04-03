@@ -18,10 +18,6 @@ input:focus {
 .gradientBackgroundChange {
   background: $purpleToBlue-opMed !important;
 }
-.loading-active {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
 .over {
   opacity: 0.75;
 }
@@ -29,20 +25,22 @@ input:focus {
   transform: scale(1) !important;
 }
 
-// SCROLLBAR
-::-webkit-scrollbar {
-   	width: 10px;
-}
-::-webkit-scrollbar-track {
-   	background: #fff;
-}
-::-webkit-scrollbar-thumb {
-   	background: $xlBlue;
-   	transition: all 0.3s;
-}
-::-webkit-scrollbar-thumb:hover {
-   	background: $blue;
-}
+// // SCROLLBAR
+// ::-webkit-scrollbar {
+//    	width: 10px;
+// }
+// ::-webkit-scrollbar-track {
+//    	background: $xdBlue;
+// }
+// ::-webkit-scrollbar-thumb {
+//    	background: $xdBlue;
+//     border-top: 2px #fff solid;
+//     border-bottom: 2px #fff solid;
+//    	transition: all 0.3s;
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//    	background: #fff;
+// }
 
 // PLACEHOLDER
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -97,12 +95,15 @@ input:focus {
 
 }
 
-
+.loader:has(.loader_enter:hover) {
+  background: $purple-opMed;
+}
 
 // LOADING SCREEN
-.loading {
+.loader {
   width: 100%;
   height: 100vh;
+  background: $xdBlue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,15 +112,62 @@ input:focus {
   z-index: 5;
   visibility: hidden;
   opacity: 0;
-  transition: all 1s;
-  animation: loading 2.5s;
-  &_title {
+  transition: all 0.666s;
+  // animation: loader 2.5s;
+  &_active {
+      opacity: 1 !important;
+      visibility: visible !important;
+  }
+  &_enter {
+    background: transparent;
     color: #fff;
-    font-family: $NS-Lgh;
+    opacity: 0;
+    border: 2px $ddBlue solid;
+    border-image: $blueToPurple 30;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-family: $NS-xLgh;
     font-size: $Big;
-    margin-top: 35px;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.3s;
+    animation: loader_enter 2s forwards;
+    z-index: 1;
+    display: none;
+    &:hover {
+      background: $ddBlue;
+      border: 2px $ddBlue solid;
+      color: $lBlue;
+    &::before {
+        letter-spacing: 1px;
+      }
+    }
+    
+    &::before {
+      content: 'Start';
+      position: absolute;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      letter-spacing: 4px;
+      transition: all 0.3s;
+    }
+    @keyframes loader_enter {
+      to {
+        opacity: 1;
+      }
+    }
   }
   &_svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 1;
+    animation: dash667 2.5s forwards;
+    
     &_path {
       fill: transparent;
       stroke-width: 4px;
@@ -129,13 +177,14 @@ input:focus {
       animation: dash666 2.5s linear;
     }
     @keyframes dash666 {
-      50% {
-        stroke: $purple;
-      }
-      100% {
-        stroke: transparent;
+      to {
         stroke-dashoffset: -100;
       }
+    }
+  }
+  @keyframes dash667 {
+    to {
+      opacity: 0;
     }
   }
 }
